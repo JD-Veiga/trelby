@@ -189,6 +189,7 @@ class MyFrame(wx.Frame):
         self.SetMenuBar(self.menuBar)
 
         self.toolBar = self.CreateToolBar(wx.TB_VERTICAL)
+        self.toolBar.SetToolBitmapSize(self.FromDIP(wx.Size(32, 32)))
 
         def addTB(id, iconFilename, toolTip):
             filepath = misc.getFullPath(("trelby/resources/%s" % iconFilename))
@@ -199,7 +200,7 @@ class MyFrame(wx.Frame):
 
             if wx.SystemSettings.GetAppearance().IsDark():
                 svg_content = svg_content.replace("fill:#000000", "fill:#CCCCCC")
-            svg_content = svg_content.encode()
+            svg_content = svg_content.encode('utf-8')
 
             # svg_image = wx.svg.SVGimage.CreateFromBytes(svg_content)
             bitmap = wx.BitmapBundle.FromSVG(svg_content, wx.Size(32, 32))
