@@ -23,6 +23,40 @@ from trelby.ids import *
 from trelby.trelbypanel import MyPanel
 
 
+def to_mnemonics(mnemonic, menu_text):
+    """Set the given keyboard mnemonic for the given menu item text.
+
+    Menu text must be already translated and can include a keyboard shortcut.
+
+    This is useful for maintaining keyboard mnemonics across translations
+    and to not pollute translation files with ampersands.
+
+    NOTE: macOS and Gnome do not support keyboard mnemonics.
+
+    Args:
+        mnemonic: character of the keyboard mnemonic.
+        menu_text: text of the menu item --without the mnemonic.
+
+    Returns:
+        Translated menu text with the mnemonic.
+        If the mnemonic character is not in the translated menu text,
+        appends it at the end of the menu command text.
+
+    """
+    mnemonic = mnemonic.strip()[0].casefold()
+    text, separator, shortcut = menu_text.partition('\t')
+
+    if mnemonic in text.casefold():
+        method = str.lower
+        if mnemonic.upper() in text:
+            method = str.upper
+        text = text.replace(method(mnemonic), f'&{method(mnemonic)}', 1)
+    else:
+        text = f'{text} (&{mnemonic.upper()})'
+
+    return ''.join([text, separator, shortcut])
+
+
 class MyFrame(wx.Frame):
 
     def __init__(self, parent, id, title, gd, myApp):
@@ -48,70 +82,144 @@ class MyFrame(wx.Frame):
         # self.allocIds()
 
         fileMenu = wx.Menu()
-        fileMenu.Append(ID_FILE_NEW, "(&N) " + _("New") + "\tCTRL-N")
-        fileMenu.Append(ID_FILE_OPEN, "(&O) " + _("Open") + "...\tCTRL-O")
-        fileMenu.Append(ID_FILE_SAVE, "(&S) " + _("Save") + "\tCTRL-S")
-        fileMenu.Append(ID_FILE_SAVE_AS, "(&A) " + _("Save As") + "...")
-        fileMenu.Append(ID_FILE_CLOSE, "(&C) " + _("Close\tCTRL-W"))
-        fileMenu.Append(ID_FILE_REVERT, "(&R) " + _("Revert"))
+        fileMenu.Append(
+            ID_FILE_NEW, to_mnemonics('N', _("New") + "\tCTRL-N")
+        )
+        fileMenu.Append(
+            ID_FILE_OPEN, to_mnemonics('O', _("Open") + "...\tCTRL-O")
+        )
+        fileMenu.Append(
+            ID_FILE_SAVE, to_mnemonics('S', _("Save") + "\tCTRL-S")
+        )
+        fileMenu.Append(
+            ID_FILE_SAVE_AS, to_mnemonics('A', _("Save As") + "...")
+        )
+        fileMenu.Append(
+            ID_FILE_CLOSE, to_mnemonics('C', _("Close") + "\tCTRL-W")
+        )
+        fileMenu.Append(
+            ID_FILE_REVERT, to_mnemonics('R', _("Revert"))
+        )
         fileMenu.AppendSeparator()
-        fileMenu.Append(ID_FILE_IMPORT, "(&I) " + _("Import") + "...")
-        fileMenu.Append(ID_FILE_EXPORT, "(&E) " + _("Export") + "...")
+        fileMenu.Append(
+            ID_FILE_IMPORT, to_mnemonics('I', _("Import") + "...")
+        )
+        fileMenu.Append(
+            ID_FILE_EXPORT, to_mnemonics('E', _("Export") + "...")
+        )
         fileMenu.AppendSeparator()
-        fileMenu.Append(ID_FILE_PRINT, "(&P) " + _("Print (via PDF)") + "\tCTRL-P")
+        fileMenu.Append(
+            ID_FILE_PRINT,
+            to_mnemonics('P', _("Print to PDF") + "\tCTRL-P")
+        )
         fileMenu.AppendSeparator()
 
         tmp = wx.Menu()
 
-        tmp.Append(ID_SETTINGS_CHANGE, "(&C) " + _("Change") + "...")
+        tmp.Append(
+            ID_SETTINGS_CHANGE, to_mnemonics('C', _("Change") + "...")
+        )
         tmp.AppendSeparator()
-        tmp.Append(ID_SETTINGS_LOAD, _("Load") + "...")
-        tmp.Append(ID_SETTINGS_SAVE_AS, _("Save as") + "...")
+        tmp.Append(
+            ID_SETTINGS_LOAD, _("Load") + "..."
+        )
+        tmp.Append(
+            ID_SETTINGS_SAVE_AS, _("Save as") + "..."
+        )
         tmp.AppendSeparator()
-        tmp.Append(ID_SETTINGS_SC_DICT, "(&S) " + _("Spell checker dictionary") + "...")
+        tmp.Append(
+            ID_SETTINGS_SC_DICT,
+            to_mnemonics('S', _("Spell checker dictionary") + "...")
+        )
         settingsMenu = tmp
 
-        fileMenu.Append(ID_FILE_SETTINGS, "(&t) " + _("Settings"), tmp)
+        fileMenu.Append(
+            ID_FILE_SETTINGS, to_mnemonics('t', _("Settings")), tmp
+        )
 
         fileMenu.AppendSeparator()
         # "most recently used" list comes in here
         fileMenu.AppendSeparator()
-        fileMenu.Append(ID_FILE_EXIT, "(x) " + _("Exit") + "\tCTRL-Q")
+        fileMenu.Append(
+            ID_FILE_EXIT, to_mnemonics('x', _("Exit") + "\tCTRL-Q")
+        )
 
         editMenu = wx.Menu()
-        editMenu.Append(ID_EDIT_UNDO, "(&U) " + _("Undo") + "\tCTRL-Z")
-        editMenu.Append(ID_EDIT_REDO, "(&R) " + _("Redo") + "\tCTRL-Y")
+        editMenu.Append(
+            ID_EDIT_UNDO, to_mnemonics('U', _("Undo") + "\tCTRL-Z")
+        )
+        editMenu.Append(
+            ID_EDIT_REDO, to_mnemonics('R', _("Redo") + "\tCTRL-Y")
+        )
         editMenu.AppendSeparator()
-        editMenu.Append(ID_EDIT_CUT, "(&t) " + _("Cut") + "\tCTRL-X")
-        editMenu.Append(ID_EDIT_COPY, "(&C) " + _("Copy") + "\tCTRL-C")
-        editMenu.Append(ID_EDIT_PASTE, "(&P) " + _("Paste") + "\tCTRL-V")
+        editMenu.Append(
+            ID_EDIT_CUT, to_mnemonics('t', _("Cut") + "\tCTRL-X")
+        )
+        editMenu.Append(
+            ID_EDIT_COPY, to_mnemonics('C', _("Copy") + "\tCTRL-C")
+        )
+        editMenu.Append(
+            ID_EDIT_PASTE, to_mnemonics('P', _("Paste") + "\tCTRL-V")
+        )
         editMenu.AppendSeparator()
 
         tmp = wx.Menu()
-        tmp.Append(ID_EDIT_COPY_TO_CB, "(&U) " + _("Unformatted"))
-        tmp.Append(ID_EDIT_COPY_TO_CB_FMT, "(&F) " + _("Formatted"))
+        tmp.Append(
+            ID_EDIT_COPY_TO_CB, to_mnemonics('U', _("Unformatted"))
+        )
+        tmp.Append(
+            ID_EDIT_COPY_TO_CB_FMT, to_mnemonics('F', _("Formatted"))
+        )
 
-        editMenu.Append(ID_EDIT_COPY_SYSTEM, "(&o) " + _("Copy (system)"), tmp)
-        editMenu.Append(ID_EDIT_PASTE_FROM_CB, "(&a) " + _("Paste (system)"))
+        editMenu.Append(
+            ID_EDIT_COPY_SYSTEM, to_mnemonics('o', _("Copy (system)")), tmp
+        )
+        editMenu.Append(
+            ID_EDIT_PASTE_FROM_CB, to_mnemonics('a', _("Paste (system)"))
+        )
         editMenu.AppendSeparator()
-        editMenu.Append(ID_EDIT_SELECT_SCENE, "(&S) " + _("Select scene"))
-        editMenu.Append(ID_EDIT_SELECT_ALL, "(&l) " + _("Select all"))
-        editMenu.Append(ID_EDIT_GOTO_PAGE, "(&G) " + _("Goto page") + "...\tCTRL-G")
-        editMenu.Append(ID_EDIT_GOTO_SCENE, "(&e) " + _("Goto scene") + "...\tALT-G")
+        editMenu.Append(
+            ID_EDIT_SELECT_SCENE, to_mnemonics('S', _("Select scene"))
+        )
+        editMenu.Append(
+            ID_EDIT_SELECT_ALL, to_mnemonics('l', _("Select all"))
+        )
+        editMenu.Append(
+            ID_EDIT_GOTO_PAGE,
+            to_mnemonics('G', _("Goto page") + "...\tCTRL-G")
+        )
+        editMenu.Append(
+            ID_EDIT_GOTO_SCENE,
+            to_mnemonics('e', _("Goto scene") + "...\tALT-G")
+        )
         editMenu.AppendSeparator()
-        editMenu.Append(ID_EDIT_INSERT_NBSP, _("Insert non-breaking space"))
+        editMenu.Append(
+            ID_EDIT_INSERT_NBSP, _("Insert non-breaking space")
+        )
         editMenu.AppendSeparator()
-        editMenu.Append(ID_EDIT_FIND, "(&F) " + _("Find && Replace") + "...\tCTRL-F")
+        editMenu.Append(
+            ID_EDIT_FIND,
+            to_mnemonics('F', _("Find && Replace") + "...\tCTRL-F")
+        )
         editMenu.AppendSeparator()
-        editMenu.Append(ID_EDIT_DELETE_ELEMENTS, "(&D) " + _("Delete elements") + "...")
+        editMenu.Append(
+            ID_EDIT_DELETE_ELEMENTS,
+            to_mnemonics('D', _("Delete elements") + "...")
+        )
 
         viewMenu = wx.Menu()
-        viewMenu.AppendRadioItem(ID_VIEW_STYLE_DRAFT, "(&D) " + _("Draft"))
-        viewMenu.AppendRadioItem(ID_VIEW_STYLE_LAYOUT, "(&L) " + _("Layout"))
         viewMenu.AppendRadioItem(
-            ID_VIEW_STYLE_SIDE_BY_SIDE, "(&S) " + _("Side by side")
+            ID_VIEW_STYLE_DRAFT, to_mnemonics('D', _("Draft"))
         )
-        viewMenu.AppendCheckItem(ID_SHOW_HIDE_TOOLBAR, "(&S) " + _("Show/Hide Toolbar"))
+        viewMenu.AppendRadioItem(
+            ID_VIEW_STYLE_LAYOUT, to_mnemonics('L', _("Layout"))
+        )
+        viewMenu.AppendRadioItem(
+            ID_VIEW_STYLE_SIDE_BY_SIDE, to_mnemonics('S', _("Side by side"))
+        )
+        viewMenu.AppendCheckItem(
+            ID_SHOW_HIDE_TOOLBAR, to_mnemonics('S', _("Show/Hide Toolbar"))
+        )
 
         if gd.viewMode == gd.VIEWMODE_DRAFT:
             viewMenu.Check(ID_VIEW_STYLE_DRAFT, True)
@@ -122,70 +230,118 @@ class MyFrame(wx.Frame):
 
         viewMenu.AppendSeparator()
         viewMenu.AppendCheckItem(
-            ID_VIEW_SHOW_FORMATTING, "(&S) " + _("Show formatting")
+            ID_VIEW_SHOW_FORMATTING, to_mnemonics('S', _("Show formatting"))
         )
-        viewMenu.Append(ID_VIEW_FULL_SCREEN, "(&F) " + _("Fullscreen") + "\tF11")
+        viewMenu.Append(
+            ID_VIEW_FULL_SCREEN, to_mnemonics('F', _("Fullscreen") + "\tF11")
+        )
 
         scriptMenu = wx.Menu()
-        scriptMenu.Append(ID_SCRIPT_FIND_ERROR, "(&F) " + _("Find next error"))
-        scriptMenu.Append(ID_SCRIPT_PAGINATE, "(&P) " + _("Paginate"))
+        scriptMenu.Append(
+            ID_SCRIPT_FIND_ERROR, to_mnemonics('F', _("Find next error"))
+        )
+        scriptMenu.Append(
+            ID_SCRIPT_PAGINATE, to_mnemonics('P', _("Paginate"))
+        )
         scriptMenu.AppendSeparator()
         scriptMenu.Append(
-            ID_SCRIPT_AUTO_COMPLETION, "(&A) " + _("Auto-completion") + "..."
+            ID_SCRIPT_AUTO_COMPLETION,
+            to_mnemonics('A', _("Auto-completion") + "...")
         )
-        scriptMenu.Append(ID_SCRIPT_HEADERS, "(&H) " + _("Headers") + "...")
-        scriptMenu.Append(ID_SCRIPT_LOCATIONS, "(&L) " + _("Locations") + "...")
-        scriptMenu.Append(ID_SCRIPT_TITLES, "(&T) " + _("Title pages") + "...")
-        scriptMenu.Append(ID_SCRIPT_SC_DICT, "(&S) " + _("Spell checker dictionary..."))
+        scriptMenu.Append(
+            ID_SCRIPT_HEADERS, to_mnemonics('H', _("Headers") + "...")
+        )
+        scriptMenu.Append(
+            ID_SCRIPT_LOCATIONS, to_mnemonics('L', _("Locations") + "...")
+        )
+        scriptMenu.Append(
+            ID_SCRIPT_TITLES, to_mnemonics('T', _("Title pages") + "...")
+        )
+        scriptMenu.Append(
+            ID_SCRIPT_SC_DICT,
+            to_mnemonics('S', _("Spell checker dictionary..."))
+        )
         scriptMenu.AppendSeparator()
 
         tmp = wx.Menu()
 
-        tmp.Append(ID_SCRIPT_SETTINGS_CHANGE, "(&C) " + _("Change") + "...")
+        tmp.Append(
+            ID_SCRIPT_SETTINGS_CHANGE, to_mnemonics('C', _("Change") + "...")
+        )
         tmp.AppendSeparator()
-        tmp.Append(ID_SCRIPT_SETTINGS_LOAD, "(&L) " + _("Load") + "...")
-        tmp.Append(ID_SCRIPT_SETTINGS_SAVE_AS, "(&S) " + _("Save as") + "...")
-        scriptMenu.Append(ID_SCRIPT_SETTINGS, "(&S) " + _("Settings"), tmp)
+        tmp.Append(
+            ID_SCRIPT_SETTINGS_LOAD, to_mnemonics('L', _("Load") + "...")
+        )
+        tmp.Append(
+            ID_SCRIPT_SETTINGS_SAVE_AS,
+            to_mnemonics('S', _("Save as") + "...")
+        )
+        scriptMenu.Append(
+            ID_SCRIPT_SETTINGS, to_mnemonics('S', _("Settings")), tmp
+        )
         scriptSettingsMenu = tmp
 
         reportsMenu = wx.Menu()
-        reportsMenu.Append(ID_REPORTS_SCRIPT_REP, "(&r) " + _("Script report"))
         reportsMenu.Append(
-            ID_REPORTS_LOCATION_REP, "(&L) " + _("Location report") + "..."
-        )
-        reportsMenu.Append(ID_REPORTS_SCENE_REP, "(&S) " + _("Scene report") + "...")
-        reportsMenu.Append(
-            ID_REPORTS_CHARACTER_REP, "(&C) " + _("Character report") + "..."
+            ID_REPORTS_SCRIPT_REP, to_mnemonics('r', _("Script report"))
         )
         reportsMenu.Append(
-            ID_REPORTS_DIALOGUE_CHART, "(&D) " + _("Dialogue chart") + "..."
+            ID_REPORTS_LOCATION_REP,
+            to_mnemonics('L', _("Location report") + "...")
+        )
+        reportsMenu.Append(
+            ID_REPORTS_SCENE_REP, to_mnemonics('S', _("Scene report") + "...")
+        )
+        reportsMenu.Append(
+            ID_REPORTS_CHARACTER_REP,
+            to_mnemonics('C', _("Character report") + "...")
+        )
+        reportsMenu.Append(
+            ID_REPORTS_DIALOGUE_CHART,
+            to_mnemonics('D', _("Dialogue chart") + "...")
         )
 
         toolsMenu = wx.Menu()
-        toolsMenu.Append(ID_TOOLS_SPELL_CHECK, "(&S) " + _("Spell checker") + "...")
-        toolsMenu.Append(ID_TOOLS_NAME_DB, "(&N) " + _("Name database") + "...")
-        toolsMenu.Append(ID_TOOLS_CHARMAP, "(&C) " + _("Character map") + "...")
         toolsMenu.Append(
-            ID_TOOLS_COMPARE_SCRIPTS, "(&o) " + _("Compare scripts") + "..."
+            ID_TOOLS_SPELL_CHECK,
+            to_mnemonics('S', _("Spell checker") + "...")
         )
         toolsMenu.Append(
-            ID_TOOLS_WATERMARK, "(&G) " + _("Generate watermarked PDFs") + "..."
+            ID_TOOLS_NAME_DB, to_mnemonics('N', _("Name database") + "...")
+        )
+        toolsMenu.Append(
+            ID_TOOLS_CHARMAP, to_mnemonics('C', _("Character map") + "...")
+        )
+        toolsMenu.Append(
+            ID_TOOLS_COMPARE_SCRIPTS,
+            to_mnemonics('o', _("Compare scripts") + "...")
+        )
+        toolsMenu.Append(
+            ID_TOOLS_WATERMARK,
+            to_mnemonics('G', _("Generate watermarked PDFs") + "...")
         )
 
         helpMenu = wx.Menu()
-        helpMenu.Append(ID_HELP_COMMANDS, "(&C) " + _("Commands") + "...")
-        helpMenu.Append(ID_HELP_MANUAL, "(&M) " + _("Manual"))
+        helpMenu.Append(
+            ID_HELP_COMMANDS, to_mnemonics('C', _("Commands") + "...")
+        )
+        helpMenu.Append(
+            ID_HELP_MANUAL, to_mnemonics('M', _("Manual"))
+        )
         helpMenu.AppendSeparator()
-        helpMenu.Append(ID_HELP_ABOUT, "(&A) " + _("About") + "...")
+        helpMenu.Append(
+            ID_HELP_ABOUT, to_mnemonics('A', _("About") + "...")
+        )
+        helpMenu.Append(wx.ID_ABOUT, to_mnemonics('A', _("About") + "..."))
 
         self.menuBar = wx.MenuBar()
-        self.menuBar.Append(fileMenu, "(&F) " + _("File"))
-        self.menuBar.Append(editMenu, "(&E) " + _("Edit"))
-        self.menuBar.Append(viewMenu, "(&V) " + _("View"))
-        self.menuBar.Append(scriptMenu, "(&i) " + _("Script"))
-        self.menuBar.Append(reportsMenu, "(&R) " + _("Reports"))
-        self.menuBar.Append(toolsMenu, "(&l) " + _("Tools"))
-        self.menuBar.Append(helpMenu, "(&H) " + _("Help"))
+        self.menuBar.Append(fileMenu, to_mnemonics('F', _("File")))
+        self.menuBar.Append(editMenu, to_mnemonics('E', _("Edit")))
+        self.menuBar.Append(viewMenu, to_mnemonics('V', _("View")))
+        self.menuBar.Append(scriptMenu, to_mnemonics('i', _("Script")))
+        self.menuBar.Append(reportsMenu, to_mnemonics('R', _("Reports")))
+        self.menuBar.Append(toolsMenu, to_mnemonics('l', _("Tools")))
+        self.menuBar.Append(helpMenu, to_mnemonics('H', _("Help")))
         self.SetMenuBar(self.menuBar)
 
         self.toolBar = self.CreateToolBar(wx.TB_VERTICAL)
@@ -213,12 +369,12 @@ class MyFrame(wx.Frame):
             )
 
         addTB(ID_FILE_NEW, "new.svg", _("New script"))
-        addTB(ID_FILE_OPEN, "open.svg", _("Open Script") + "..")
-        addTB(ID_FILE_SAVE, "save.svg", _("Save") + "..")
-        addTB(ID_FILE_SAVE_AS, "saveas.svg", _("Save as") + "..")
+        addTB(ID_FILE_OPEN, "open.svg", _("Open Script") + "...")
+        addTB(ID_FILE_SAVE, "save.svg", _("Save") + "...")
+        addTB(ID_FILE_SAVE_AS, "saveas.svg", _("Save as") + "...")
         addTB(ID_FILE_CLOSE, "close.svg", _("Close Script"))
         addTB(ID_TOOLBAR_SCRIPTSETTINGS, "scrset.svg", _("Script settings"))
-        addTB(ID_FILE_PRINT, "pdf.svg", _("Print (via PDF)"))
+        addTB(ID_FILE_PRINT, "pdf.svg", _("Print to PDF"))
 
         self.toolBar.AddSeparator()
 
@@ -282,15 +438,33 @@ class MyFrame(wx.Frame):
         for m in (self.rightClickMenu, self.rightClickMenuWithCut):
             tmp = wx.Menu()
 
-            tmp.Append(ID_ELEM_TO_SCENE, "(&S) " + _("Scene"))
-            tmp.Append(ID_ELEM_TO_ACTION, "(&A) " + _("Action"))
-            tmp.Append(ID_ELEM_TO_CHARACTER, "(&C) " + _("Character"))
-            tmp.Append(ID_ELEM_TO_PAREN, "(&P) " + _("Parenthetical"))
-            tmp.Append(ID_ELEM_TO_DIALOGUE, "(&D) " + _("Dialogue"))
-            tmp.Append(ID_ELEM_TO_TRANSITION, "(&T) " + _("Transition"))
-            tmp.Append(ID_ELEM_TO_SHOT, "(&o) " + _("Shot"))
-            tmp.Append(ID_ELEM_TO_ACTBREAK, "(&b) " + _("Act break"))
-            tmp.Append(ID_ELEM_TO_NOTE, "(&N) " + _("Note"))
+            tmp.Append(
+                ID_ELEM_TO_SCENE, to_mnemonics('S', _("Scene"))
+            )
+            tmp.Append(
+                ID_ELEM_TO_ACTION, to_mnemonics('A', _("Action"))
+            )
+            tmp.Append(
+                ID_ELEM_TO_CHARACTER, to_mnemonics('C', _("Character"))
+            )
+            tmp.Append(
+                ID_ELEM_TO_PAREN, to_mnemonics('P', _("Parenthetical"))
+            )
+            tmp.Append(
+                ID_ELEM_TO_DIALOGUE, to_mnemonics('D', _("Dialogue"))
+            )
+            tmp.Append(
+                ID_ELEM_TO_TRANSITION, to_mnemonics('T', _("Transition"))
+            )
+            tmp.Append(
+                ID_ELEM_TO_SHOT, to_mnemonics('o', _("Shot"))
+            )
+            tmp.Append(
+                ID_ELEM_TO_ACTBREAK, to_mnemonics('b', _("Act break"))
+            )
+            tmp.Append(
+                ID_ELEM_TO_NOTE, to_mnemonics('N', _("Note"))
+            )
 
             m.AppendSubMenu(tmp, _("Element type"))
             m.AppendSeparator()
@@ -375,6 +549,7 @@ class MyFrame(wx.Frame):
             self.Bind(wx.EVT_MENU, self.OnHelpCommands, id=ID_HELP_COMMANDS)
             self.Bind(wx.EVT_MENU, self.OnHelpManual, id=ID_HELP_MANUAL)
             self.Bind(wx.EVT_MENU, self.OnAbout, id=ID_HELP_ABOUT)
+            self.Bind(wx.EVT_MENU, self.OnAbout, id=wx.ID_ABOUT)
 
         self.Bind(
             wx.EVT_MENU_RANGE,
@@ -968,7 +1143,7 @@ class MyFrame(wx.Frame):
                 _("Save Changes"),
                 wx.YES_NO | wx.CANCEL | wx.YES_DEFAULT,
             )
-            close_msg_box.SetYesNoLabels(wx.ID_SAVE, "(&D) " + _("Don't save"))
+            close_msg_box.SetYesNoLabels(wx.ID_SAVE, to_mnemonics('D', _("Don't save")))
             response = close_msg_box.ShowModal()
             if response == wx.ID_YES:
                 self.OnSave()

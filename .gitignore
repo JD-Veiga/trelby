@@ -18,5 +18,8 @@ MANIFEST
 # coverage specific
 .coverage
 
+# git specifics
+.pre-commit-config.yaml
+
 #Choco
 *.nupkg
