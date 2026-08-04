@@ -8,19 +8,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trelby 2.4.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-29 15:01-0500\n"
-"PO-Revision-Date: 2025-08-29 15:03-0500\n"
+"POT-Creation-Date: 2026-08-04 21:45+0200\n"
+"PO-Revision-Date: 2026-08-04 16:45+0200\n"
 "Last-Translator: Gwyn Ciesla <gwync@protonmail.com>\n"
 "Language-Team: \n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.9\n"
 
 #: trelby/configpages/colorspanel.py:36 trelby/configpages/displaypanel.py:25
 #: trelby/configpages/colorspanel.py:35 trelby/configpages/displaypanel.py:24
-#: trelby/trelbyframe.py:66 trelby/trelbyframe.py:144
+#: trelby/trelbyframe.py:66 trelby/trelbyframe.py:144 trelby/trelbyframe.py:120
+#: trelby/trelbyframe.py:269
 msgid "Change"
 msgstr "Change"
 
@@ -149,6 +150,7 @@ msgstr "Action:"
 
 #: trelby/configpages/formattingpanel.py:29
 #: trelby/configpages/formattingpanel.py:28 trelby/trelbyframe.py:288
+#: trelby/trelbyframe.py:454
 msgid "Dialogue"
 msgstr "Dialogue"
 
@@ -188,6 +190,7 @@ msgid "Show line numbers (debug)"
 msgstr "Show line numbers (debug)"
 
 #: trelby/autocompletiondlg.py:14 trelby/trelbyframe.py:134
+#: trelby/trelbyframe.py:249
 msgid "Auto-completion"
 msgstr "Auto-completion"
 
@@ -203,6 +206,7 @@ msgstr "Default items:"
 #: trelby/importdlg.py:57 trelby/locationsdlg.py:49 trelby/misc.py:649
 #: trelby/misc.py:741 trelby/misc.py:926 trelby/spellcheckcfgdlg.py:38
 #: trelby/titlesdlg.py:197 trelby/gutil.py:55 trelby/importdlg.py:58
+#: trelby/misc.py:650 trelby/misc.py:742 trelby/misc.py:927
 msgid "Cancel"
 msgstr "Cancel"
 
@@ -211,6 +215,7 @@ msgid "Settings dialog"
 msgstr "Settings dialog"
 
 #: trelby/cfgdlg.py:36 trelby/cfgdlg.py:45 trelby/trelbyframe.py:179
+#: trelby/trelbyframe.py:333 trelby/trelbyframe.py:335
 msgid "About"
 msgstr "About"
 
@@ -258,7 +263,7 @@ msgstr "Strings"
 msgid "Apply"
 msgstr "Apply"
 
-#: trelby/charmapdlg.py:9 trelby/trelbyframe.py:167
+#: trelby/charmapdlg.py:9 trelby/trelbyframe.py:167 trelby/trelbyframe.py:313
 msgid "Character map"
 msgstr "Character map"
 
@@ -291,7 +296,7 @@ msgstr "Non-breaking space"
 msgid "Click on a character to select it."
 msgstr "Click on a character to select it."
 
-#: trelby/commandsdlg.py:12 trelby/trelbyframe.py:176
+#: trelby/commandsdlg.py:12 trelby/trelbyframe.py:176 trelby/trelbyframe.py:326
 msgid "Commands"
 msgstr "Commands"
 
@@ -311,6 +316,7 @@ msgstr "No key defined"
 #: trelby/trelbyframe.py:837 trelby/trelbyctrl.py:1030
 #: trelby/trelbyframe.py:664 trelby/trelbyframe.py:836
 #: trelby/trelbyframe.py:706 trelby/trelbyframe.py:890
+#: trelby/trelbyframe.py:882 trelby/trelbyframe.py:1066
 msgid "Filename to save as"
 msgstr "Filename to save as"
 
@@ -383,7 +389,9 @@ msgstr "The key is already bound to this command."
 #: trelby/trelbyframe.py:515 trelby/trelbyframe.py:868 trelby/trelby.py:57
 #: trelby/trelby.py:74 trelby/trelby.py:84 trelby/util.py:1251
 #: trelby/trelby.py:48 trelby/trelby.py:65 trelby/trelby.py:75
-#: trelby/trelbyframe.py:531 trelby/trelbyframe.py:928
+#: trelby/trelbyframe.py:531 trelby/trelbyframe.py:928 trelby/util.py:1003
+#: trelby/util.py:1037 trelby/util.py:1064 trelby/util.py:1253
+#: trelby/trelbyframe.py:707 trelby/trelbyframe.py:1104 trelby/misc.py:973
 msgid "Error"
 msgstr "Error"
 
@@ -685,35 +693,35 @@ msgstr "No scenes selected in the lower list."
 msgid "No scene selected in the upper list."
 msgstr "No scene selected in the upper list."
 
-#: trelby/misc.py:629
+#: trelby/misc.py:629 trelby/misc.py:630
 msgid "Choose scripts"
 msgstr "Choose scripts"
 
-#: trelby/misc.py:636
+#: trelby/misc.py:636 trelby/misc.py:637
 msgid "Compare script"
 msgstr "Compare script"
 
-#: trelby/misc.py:637
+#: trelby/misc.py:637 trelby/misc.py:638
 msgid "to"
 msgstr "to"
 
-#: trelby/misc.py:641
+#: trelby/misc.py:641 trelby/misc.py:642
 msgid "Use same configuration"
 msgstr "Use same configuration"
 
-#: trelby/misc.py:767
+#: trelby/misc.py:767 trelby/misc.py:768
 msgid "Set"
 msgstr "Set"
 
-#: trelby/misc.py:771
+#: trelby/misc.py:771 trelby/misc.py:772
 msgid "Clear"
 msgstr "Clear"
 
-#: trelby/misc.py:775
+#: trelby/misc.py:775 trelby/misc.py:776
 msgid "Toggle"
 msgstr "Toggle"
 
-#: trelby/misc.py:986
+#: trelby/misc.py:986 trelby/misc.py:987
 msgid "Key capture"
 msgstr "Key capture"
 
@@ -779,6 +787,7 @@ msgid "Character name database"
 msgstr "Character name database"
 
 #: trelby/namesdlg.py:99 trelby/namesdlg.py:104 trelby/trelbyframe.py:98
+#: trelby/trelbyframe.py:185
 msgid "Select all"
 msgstr "Select all"
 
@@ -831,6 +840,7 @@ msgid "Characters to include:"
 msgstr "Characters to include:"
 
 #: trelby/spellcheckdlg.py:15 trelby/trelbyframe.py:165
+#: trelby/trelbyframe.py:307
 msgid "Spell checker"
 msgstr "Spell checker"
 
@@ -861,6 +871,7 @@ msgid "Suggestions"
 msgstr "Suggestions"
 
 #: trelby/spellcheckcfgdlg.py:14 trelby/trelbyframe.py:71
+#: trelby/trelbyframe.py:132
 msgid "Spell checker dictionary"
 msgstr "Spell checker dictionary"
 
@@ -880,7 +891,7 @@ msgstr "Splash"
 msgid "Last quote does not have source"
 msgstr "Last quote does not have source"
 
-#: trelby/titlesdlg.py:17 trelby/trelbyframe.py:138
+#: trelby/titlesdlg.py:17 trelby/trelbyframe.py:138 trelby/trelbyframe.py:258
 msgid "Title pages"
 msgstr "Title pages"
 
@@ -941,7 +952,7 @@ msgstr "Confidential"
 msgid "Watermarks (one per line):"
 msgstr "Watermarks (one per line):"
 
-#: trelby/watermarkdlg.py:61
+#: trelby/watermarkdlg.py:61 trelby/trelbyframe.py:98
 msgid "Close"
 msgstr "Close"
 
@@ -966,7 +977,8 @@ msgid "No watermarks specified."
 msgstr "No watermarks specified."
 
 #: trelby/trelbyctrl.py:140 trelby/trelbyctrl.py:143 trelby/trelbyframe.py:480
-#: trelby/util.py:1273 trelby/trelbyframe.py:496
+#: trelby/util.py:1273 trelby/trelbyframe.py:496 trelby/util.py:1275
+#: trelby/trelbyframe.py:672
 msgid "Warning"
 msgstr "Warning"
 
@@ -1001,6 +1013,7 @@ msgid "Invalid scene number."
 msgstr "Invalid scene number."
 
 #: trelby/trelbyctrl.py:847 trelby/trelbyctrl.py:854 trelby/trelbyframe.py:100
+#: trelby/trelbyframe.py:193
 msgid "Goto scene"
 msgstr "Goto scene"
 
@@ -1009,6 +1022,7 @@ msgid "Invalid page number."
 msgstr "Invalid page number."
 
 #: trelby/trelbyctrl.py:879 trelby/trelbyctrl.py:886 trelby/trelbyframe.py:99
+#: trelby/trelbyframe.py:189
 msgid "Goto page"
 msgstr "Goto page"
 
@@ -1021,6 +1035,7 @@ msgid "Spell checker found no errors."
 msgstr "Spell checker found no errors."
 
 #: trelby/trelbyctrl.py:986 trelby/trelbyctrl.py:992 trelby/trelbyframe.py:106
+#: trelby/trelbyframe.py:207
 msgid "Delete elements"
 msgstr "Delete elements"
 
@@ -1033,22 +1048,27 @@ msgid "Filename to export as"
 msgstr "Filename to export as"
 
 #: trelby/trelbyframe.py:236 trelby/trelbyframe.py:252
+#: trelby/trelbyframe.py:409
 msgid "Exit fullscreen"
 msgstr "Exit fullscreen"
 
 #: trelby/trelbyframe.py:278 trelby/trelbyframe.py:294
+#: trelby/trelbyframe.py:469
 msgid "Element type"
 msgstr "Element type"
 
 #: trelby/trelbyframe.py:282 trelby/trelbyframe.py:85 trelby/trelbyframe.py:298
+#: trelby/trelbyframe.py:156 trelby/trelbyframe.py:473
 msgid "Cut"
 msgstr "Cut"
 
 #: trelby/trelbyframe.py:283 trelby/trelbyframe.py:86 trelby/trelbyframe.py:299
+#: trelby/trelbyframe.py:159 trelby/trelbyframe.py:474
 msgid "Copy"
 msgstr "Copy"
 
 #: trelby/trelbyframe.py:285 trelby/trelbyframe.py:87 trelby/trelbyframe.py:301
+#: trelby/trelbyframe.py:162 trelby/trelbyframe.py:476
 msgid "Paste"
 msgstr "Paste"
 
@@ -1056,17 +1076,18 @@ msgstr "Paste"
 #: trelby/trelbyframe.py:816 trelby/trelbyframe.py:571
 #: trelby/trelbyframe.py:642 trelby/trelbyframe.py:815
 #: trelby/trelbyframe.py:587 trelby/trelbyframe.py:679
-#: trelby/trelbyframe.py:862
+#: trelby/trelbyframe.py:862 trelby/trelbyframe.py:763
+#: trelby/trelbyframe.py:855 trelby/trelbyframe.py:1038
 msgid "File to open"
 msgstr "File to open"
 
 #: trelby/trelbyframe.py:869 trelby/trelbyframe.py:868
-#: trelby/trelbyframe.py:928
+#: trelby/trelbyframe.py:928 trelby/trelbyframe.py:1104
 msgid "Error opening name database."
 msgstr "Error opening name database."
 
 #: trelby/trelbyframe.py:907 trelby/trelbyframe.py:906
-#: trelby/trelbyframe.py:966
+#: trelby/trelbyframe.py:966 trelby/trelbyframe.py:1142
 msgid ""
 "You have unsaved changes. Do\n"
 "you want to save your changes?"
@@ -1075,7 +1096,7 @@ msgstr ""
 "you want to save your changes?"
 
 #: trelby/trelbyframe.py:908 trelby/trelbyframe.py:907
-#: trelby/trelbyframe.py:967
+#: trelby/trelbyframe.py:967 trelby/trelbyframe.py:1143
 msgid "Save Changes"
 msgstr "Save Changes"
 
@@ -1093,6 +1114,7 @@ msgid "Speeches: {}, Lines: {:.2f}, per speech: {:.2f}"
 msgstr "Speeches: {}, Lines: {:.2f}, per speech: {:.2f}"
 
 #: trelby/characterreport.py:103
+#, python-brace-format
 msgid "Speeches: {}, Lines: {} %{:.2f}, per speech: {:.2f}"
 msgstr "Speeches: {}, Lines: {} %{:.2f}, per speech: {:.2f}"
 
@@ -1101,10 +1123,12 @@ msgid "Words: {}, per speech: %{:.2f}, characters per: %{:.2f}"
 msgstr "Words: {}, per speech: %{:.2f}, characters per: %{:.2f}"
 
 #: trelby/characterreport.py:114
+#, python-brace-format
 msgid "Words: {}, per speech: {:.2f}, characters per: {:.2f}"
 msgstr "Words: {}, per speech: {:.2f}, characters per: {:.2f}"
 
 #: trelby/characterreport.py:124
+#, python-brace-format
 msgid "Pages: {}, list: {}"
 msgstr "Pages: {}, list: {}"
 
@@ -1168,6 +1192,7 @@ msgstr ""
 " (0 = disable)"
 
 #: trelby/configpages/paperpanel.py:130
+#, python-brace-format
 msgid "Lines per page: {}"
 msgstr "Lines per page: {}"
 
@@ -1188,6 +1213,7 @@ msgstr ""
 "See the manual for the full details.\n"
 
 #: trelby/configpages/pdffontspanel.py:161
+#, python-brace-format
 msgid ""
 "File '{}'\n"
 "does not appear to be a valid TrueType font."
@@ -1196,6 +1222,7 @@ msgstr ""
 "does not appear to be a valid TrueType font."
 
 #: trelby/configpages/pdffontspanel.py:175
+#, python-brace-format
 msgid ""
 "Font '{}'\n"
 "does not allow embedding in its license terms.\n"
@@ -1656,6 +1683,7 @@ msgid "Tab, non-active"
 msgstr "Tab, non-active"
 
 #: trelby/config.py:1227
+#, python-brace-format
 msgid "Text foreground for {}"
 msgstr "Text foreground for {}"
 
@@ -1668,10 +1696,12 @@ msgid "Unknown platform"
 msgstr "Unknown platform"
 
 #: trelby/config.py:1509
+#, python-brace-format
 msgid "key '{}' not found from '{}'"
 msgstr "key '{}' not found from '{}'"
 
 #: trelby/finddlg.py:385
+#, python-brace-format
 msgid ""
 "Search finished at the {} of the script. Do\n"
 "you want to continue at the {} of the script?"
@@ -1684,6 +1714,7 @@ msgid "Continue?"
 msgstr "Continue?"
 
 #: trelby/finddlg.py:465
+#, python-brace-format
 msgid "Replaced {} matches"
 msgstr "Replaced {} matches"
 
@@ -1692,6 +1723,7 @@ msgid "Files"
 msgstr "Files"
 
 #: trelby/globaldata.py:96
+#, python-brace-format
 msgid ""
 "Error creating configuration directory\n"
 "'{}': {}"
@@ -1700,10 +1732,12 @@ msgstr ""
 "'{}': {}"
 
 #: trelby/gutil.py:107
+#, python-brace-format
 msgid "Error writing temporary PDF file: {}"
 msgstr "Error writing temporary PDF file: {}"
 
 #: trelby/importdlg.py:24
+#, python-brace-format
 msgid "{} lines (indented {} characters)"
 msgstr "{} lines (indented {} characters)"
 
@@ -1720,10 +1754,12 @@ msgid "Ignore"
 msgstr "Ignore"
 
 #: trelby/locationreport.py:94
+#, python-brace-format
 msgid "Lines: {} (%{} action, %{} of script), Scenes: {}, Pages: {} ({})"
 msgstr "Lines: {} (%{} action, %{} of script), Scenes: {}, Pages: {} ({})"
 
 #: trelby/locationsdlg.py:13 trelby/trelbyframe.py:137
+#: trelby/trelbyframe.py:255
 msgid "Locations"
 msgstr "Locations"
 
@@ -1731,7 +1767,8 @@ msgstr "Locations"
 msgid "Message"
 msgstr "Message"
 
-#: trelby/misc.py:996
+#: trelby/misc.py:996 trelby/misc.py:997
+#, python-brace-format
 msgid ""
 "Press the key combination you\n"
 "want to bind to the command\n"
@@ -1743,18 +1780,22 @@ msgstr ""
 
 #: trelby/myimport.py:58 trelby/myimport.py:132 trelby/myimport.py:262
 #: trelby/myimport.py:389
+#, python-brace-format
 msgid "Error parsing file: {}"
 msgstr "Error parsing file: {}"
 
 #: trelby/namesdlg.py:38
+#, python-brace-format
 msgid "No name type set before line: '{}'"
 msgstr "No name type set before line: '{}'"
 
 #: trelby/namesdlg.py:42
+#, python-brace-format
 msgid "Unknown linetype for line: '{}'"
 msgstr "Unknown linetype for line: '{}'"
 
 #: trelby/namesdlg.py:50
+#, python-brace-format
 msgid "Error loading name database: {}"
 msgstr "Error loading name database: {}"
 
@@ -1767,18 +1808,22 @@ msgid "Type"
 msgstr "Type"
 
 #: trelby/namesdlg.py:264
+#, python-brace-format
 msgid "{} names found."
 msgstr "{} names found."
 
 #: trelby/pdf.py:116
+#, python-brace-format
 msgid "LineOp contains only {} points"
 msgstr "LineOp contains only {} points"
 
 #: trelby/pdf.py:317
+#, python-brace-format
 msgid "PDF.getfontNr: invalid flags {}"
 msgstr "PDF.getfontNr: invalid flags {}"
 
 #: trelby/pdf.py:329
+#, python-brace-format
 msgid ""
 "Font name \"{}\" is not known and no font file name provided. Please provide "
 "a file name for this font in the settings or use the default font."
@@ -1791,6 +1836,7 @@ msgid "Speakers"
 msgstr "Speakers"
 
 #: trelby/scenereport.py:55
+#, python-brace-format
 msgid "     Lines: {} (%{} action), Pages: {} ({})"
 msgstr "     Lines: {} (%{} action), Pages: {} ({})"
 
@@ -1811,6 +1857,7 @@ msgstr ""
 "screenplay file."
 
 #: trelby/screenplay.py:244
+#, python-brace-format
 msgid ""
 "File uses fileformat version '{}',\n"
 "which is not supported by this version\n"
@@ -1821,10 +1868,12 @@ msgstr ""
 "of the program."
 
 #: trelby/screenplay.py:292
+#, python-brace-format
 msgid "Line {} is too short."
 msgstr "Line {} is too short."
 
 #: trelby/screenplay.py:298
+#, python-brace-format
 msgid ""
 "Line {} has invalid syntax for\n"
 "config line."
@@ -1833,6 +1882,7 @@ msgstr ""
 "config line."
 
 #: trelby/screenplay.py:348
+#, python-brace-format
 msgid "Line {} has invalid element type."
 msgstr "Line {} has invalid element type."
 
@@ -1877,6 +1927,7 @@ msgid "not found"
 msgstr "not found"
 
 #: trelby/screenplay.py:835
+#, python-brace-format
 msgid "Unknown line break style {} in generateRTF"
 msgstr "Unknown line break style {} in generateRTF"
 
@@ -1902,6 +1953,7 @@ msgstr "Line is too long (BUG)."
 
 #: trelby/screenplay.py:2510 trelby/screenplay.py:2519
 #: trelby/screenplay.py:2528
+#, python-brace-format
 msgid "Element type '{}' can not follow type '{}'."
 msgstr "Element type '{}' can not follow type '{}'."
 
@@ -1910,6 +1962,7 @@ msgid "Element contains lines with different line types (BUG)."
 msgstr "Element contains lines with different line types (BUG)."
 
 #: trelby/scriptreport.py:24
+#, python-brace-format
 msgid "Total lines in script: {}"
 msgstr "Total lines in script: {}"
 
@@ -1930,18 +1983,22 @@ msgid "Speaking characters"
 msgstr "Speaking characters"
 
 #: trelby/splash.py:143
+#, python-brace-format
 msgid "No lines defined for quote at line {}"
 msgstr "No lines defined for quote at line {}"
 
 #: trelby/splash.py:149
+#, python-brace-format
 msgid "Too many lines defined for quote at line {}"
 msgstr "Too many lines defined for quote at line {}"
 
 #: trelby/splash.py:167
+#, python-brace-format
 msgid "Error loading quotes: {}"
 msgstr "Error loading quotes: {}"
 
 #: trelby/trelbyctrl.py:134
+#, python-brace-format
 msgid ""
 "Error loading file:\n"
 "\n"
@@ -1952,6 +2009,7 @@ msgstr ""
 "{}"
 
 #: trelby/trelbyctrl.py:412
+#, python-brace-format
 msgid ""
 "The script seems to contain errors.\n"
 "Are you sure you want to {} it?"
@@ -1976,10 +2034,12 @@ msgstr ""
 "you want to discard the changes?"
 
 #: trelby/trelbyctrl.py:853
+#, python-brace-format
 msgid "Enter scene number ({} - {}):"
 msgstr "Enter scene number ({} - {}):"
 
 #: trelby/trelbyctrl.py:885
+#, python-brace-format
 msgid "Enter page number ({} - {}):"
 msgstr "Enter page number ({} - {}):"
 
@@ -2000,6 +2060,7 @@ msgid "{.5f} seconds per {}"
 msgstr "{.5f} seconds per {}"
 
 #: trelby/trelbyframe.py:198 trelby/trelbyframe.py:214
+#: trelby/trelbyframe.py:371
 msgid "New script"
 msgstr "New script"
 
@@ -2016,10 +2077,12 @@ msgid "Save as.."
 msgstr "Save as.."
 
 #: trelby/trelbyframe.py:202 trelby/trelbyframe.py:218
+#: trelby/trelbyframe.py:375
 msgid "Close Script"
 msgstr "Close Script"
 
 #: trelby/trelbyframe.py:203 trelby/trelbyframe.py:219
+#: trelby/trelbyframe.py:376
 msgid "Script settings"
 msgstr "Script settings"
 
@@ -2028,43 +2091,53 @@ msgid "Print (via PDF)"
 msgstr "Print (via PDF)"
 
 #: trelby/trelbyframe.py:208 trelby/trelbyframe.py:224
+#: trelby/trelbyframe.py:381
 msgid "Import a text script"
 msgstr "Import a text script"
 
 #: trelby/trelbyframe.py:209 trelby/trelbyframe.py:225
+#: trelby/trelbyframe.py:382
 msgid "Export script"
 msgstr "Export script"
 
 #: trelby/trelbyframe.py:213 trelby/trelbyframe.py:82 trelby/trelbyframe.py:229
+#: trelby/trelbyframe.py:149 trelby/trelbyframe.py:386
 msgid "Undo"
 msgstr "Undo"
 
 #: trelby/trelbyframe.py:214 trelby/trelbyframe.py:83 trelby/trelbyframe.py:230
+#: trelby/trelbyframe.py:152 trelby/trelbyframe.py:387
 msgid "Redo"
 msgstr "Redo"
 
 #: trelby/trelbyframe.py:218 trelby/trelbyframe.py:234
+#: trelby/trelbyframe.py:391
 msgid "Find / Replace"
 msgstr "Find / Replace"
 
 #: trelby/trelbyframe.py:219 trelby/trelbyframe.py:235
+#: trelby/trelbyframe.py:392
 msgid "View mode"
 msgstr "View mode"
 
 #: trelby/trelbyframe.py:220 trelby/trelbyframe.py:236
+#: trelby/trelbyframe.py:393
 msgid "Script reports"
 msgstr "Script reports"
 
 #: trelby/trelbyframe.py:221 trelby/trelbyframe.py:187
-#: trelby/trelbyframe.py:237
+#: trelby/trelbyframe.py:237 trelby/trelbyframe.py:343
+#: trelby/trelbyframe.py:394
 msgid "Tools"
 msgstr "Tools"
 
 #: trelby/trelbyframe.py:222 trelby/trelbyframe.py:238
+#: trelby/trelbyframe.py:395
 msgid "Global settings"
 msgstr "Global settings"
 
 #: trelby/trelbyframe.py:478 trelby/trelbyframe.py:494
+#: trelby/trelbyframe.py:670
 msgid ""
 "You have at least one key bound to more than one\n"
 "command. The program will not work correctly until\n"
@@ -2075,6 +2148,7 @@ msgstr ""
 "you fix this."
 
 #: trelby/trelbyframe.py:513 trelby/trelbyframe.py:529
+#: trelby/trelbyframe.py:705
 msgid ""
 "The fonts listed below are not fixed width and\n"
 "will cause the program not to function correctly.\n"
@@ -2089,10 +2163,12 @@ msgstr ""
 "\n"
 
 #: trelby/trelbyframe.py:592 trelby/trelbyframe.py:612
+#: trelby/trelbyframe.py:788
 msgid "File to import"
 msgstr "File to import"
 
 #: trelby/trelby.py:53 trelby/trelby.py:44
+#, python-brace-format
 msgid ""
 "You seem to have an invalid version\n"
 "({}) of wxWidgets installed. This\n"
@@ -2121,30 +2197,35 @@ msgstr ""
 " wxWidgets. This is not supported."
 
 #: trelby/truetype.py:81
+#, python-brace-format
 msgid "Table {} missing/invalid"
 msgstr "Table {} missing/invalid"
 
-#: trelby/util.py:993
+#: trelby/util.py:993 trelby/util.py:995
+#, python-brace-format
 msgid "File too large: {}"
 msgstr "File too large: {}"
 
-#: trelby/util.py:1000
+#: trelby/util.py:1000 trelby/util.py:1002
+#, python-brace-format
 msgid "Error loading file '{}': {}"
 msgstr "Error loading file '{}': {}"
 
-#: trelby/util.py:1034
+#: trelby/util.py:1034 trelby/util.py:1036
+#, python-brace-format
 msgid "Error loading file '{}': Decompression failed"
 msgstr "Error loading file '{}': Decompression failed"
 
-#: trelby/util.py:1061
+#: trelby/util.py:1061 trelby/util.py:1063
+#, python-brace-format
 msgid "Error writing file '{}': {}"
 msgstr "Error writing file '{}': {}"
 
-#: trelby/util.py:1140
+#: trelby/util.py:1140 trelby/util.py:1142
 msgid "{}{} took {.5f} seconds"
 msgstr "{}{} took {.5f} seconds"
 
-#: trelby/util.py:1249
+#: trelby/util.py:1249 trelby/util.py:1251
 msgid ""
 "PDF viewer application not found.\n"
 "\n"
@@ -2156,8 +2237,8 @@ msgstr ""
 "You can change your PDF viewer\n"
 "settings at File/Settings/Change/Misc."
 
-#: trelby/util.py:1269
-#, python-format
+#: trelby/util.py:1269 trelby/util.py:1271
+#, python-format, python-brace-format
 msgid ""
 "Currently set PDF viewer ({}) was not found.\n"
 "Change this in File/Settings/Change/Misc.\n"
@@ -2172,22 +2253,24 @@ msgstr ""
 "%s"
 
 #: trelby/watermarkdlg.py:165
+#, python-brace-format
 msgid "Generated {} files in directory {}."
 msgstr "Generated {} files in directory {}."
 
-#: trelby/trelbyframe.py:51
+#: trelby/trelbyframe.py:51 trelby/trelbyframe.py:86
 msgid "New"
 msgstr "New"
 
-#: trelby/trelbyframe.py:52
+#: trelby/trelbyframe.py:52 trelby/trelbyframe.py:89
 msgid "Open"
 msgstr "Open"
 
-#: trelby/trelbyframe.py:53 trelby/trelbyframe.py:216
+#: trelby/trelbyframe.py:53 trelby/trelbyframe.py:216 trelby/trelbyframe.py:92
+#: trelby/trelbyframe.py:373
 msgid "Save"
 msgstr "Save"
 
-#: trelby/trelbyframe.py:54
+#: trelby/trelbyframe.py:54 trelby/trelbyframe.py:95
 msgid "Save As"
 msgstr "Save As"
 
@@ -2195,196 +2278,202 @@ msgstr "Save As"
 msgid "Close\tCTRL-W"
 msgstr "Close\tCTRL-W"
 
-#: trelby/trelbyframe.py:56
+#: trelby/trelbyframe.py:56 trelby/trelbyframe.py:101
 msgid "Revert"
 msgstr "Revert"
 
-#: trelby/trelbyframe.py:58
+#: trelby/trelbyframe.py:58 trelby/trelbyframe.py:105
 msgid "Import"
 msgstr "Import"
 
-#: trelby/trelbyframe.py:59
+#: trelby/trelbyframe.py:59 trelby/trelbyframe.py:108
 msgid "Export"
 msgstr "Export"
 
-#: trelby/trelbyframe.py:68 trelby/trelbyframe.py:146
+#: trelby/trelbyframe.py:68 trelby/trelbyframe.py:146 trelby/trelbyframe.py:124
+#: trelby/trelbyframe.py:273
 msgid "Load"
 msgstr "Load"
 
 #: trelby/trelbyframe.py:69 trelby/trelbyframe.py:147 trelby/trelbyframe.py:217
+#: trelby/trelbyframe.py:127 trelby/trelbyframe.py:277
+#: trelby/trelbyframe.py:374
 msgid "Save as"
 msgstr "Save as"
 
-#: trelby/trelbyframe.py:74 trelby/trelbyframe.py:148
+#: trelby/trelbyframe.py:74 trelby/trelbyframe.py:148 trelby/trelbyframe.py:137
+#: trelby/trelbyframe.py:280
 msgid "Settings"
 msgstr "Settings"
 
-#: trelby/trelbyframe.py:79
+#: trelby/trelbyframe.py:79 trelby/trelbyframe.py:144
 msgid "Exit"
 msgstr "Exit"
 
-#: trelby/trelbyframe.py:91
+#: trelby/trelbyframe.py:91 trelby/trelbyframe.py:168
 msgid "Unformatted"
 msgstr "Unformatted"
 
-#: trelby/trelbyframe.py:92 trelby/trelbyframe.py:619
+#: trelby/trelbyframe.py:92 trelby/trelbyframe.py:619 trelby/trelbyframe.py:171
+#: trelby/trelbyframe.py:795
 msgid "Formatted"
 msgstr "Formatted"
 
-#: trelby/trelbyframe.py:94
+#: trelby/trelbyframe.py:94 trelby/trelbyframe.py:175
 msgid "Copy (system)"
 msgstr "Copy (system)"
 
-#: trelby/trelbyframe.py:95
+#: trelby/trelbyframe.py:95 trelby/trelbyframe.py:178
 msgid "Paste (system)"
 msgstr "Paste (system)"
 
-#: trelby/trelbyframe.py:97
+#: trelby/trelbyframe.py:97 trelby/trelbyframe.py:182
 msgid "Select scene"
 msgstr "Select scene"
 
-#: trelby/trelbyframe.py:102
+#: trelby/trelbyframe.py:102 trelby/trelbyframe.py:197
 msgid "Insert non-breaking space"
 msgstr "Insert non-breaking space"
 
-#: trelby/trelbyframe.py:104
+#: trelby/trelbyframe.py:104 trelby/trelbyframe.py:202
 msgid "Find && Replace"
 msgstr "Find && Replace"
 
-#: trelby/trelbyframe.py:109
+#: trelby/trelbyframe.py:109 trelby/trelbyframe.py:212
 msgid "Draft"
 msgstr "Draft"
 
-#: trelby/trelbyframe.py:110
+#: trelby/trelbyframe.py:110 trelby/trelbyframe.py:215
 msgid "Layout"
 msgstr "Layout"
 
-#: trelby/trelbyframe.py:112
+#: trelby/trelbyframe.py:112 trelby/trelbyframe.py:218
 msgid "Side by side"
 msgstr "Side by side"
 
-#: trelby/trelbyframe.py:114
+#: trelby/trelbyframe.py:114 trelby/trelbyframe.py:221
 msgid "Show/Hide Toolbar"
 msgstr "Show/Hide Toolbar"
 
-#: trelby/trelbyframe.py:125
+#: trelby/trelbyframe.py:125 trelby/trelbyframe.py:233
 msgid "Show formatting"
 msgstr "Show formatting"
 
-#: trelby/trelbyframe.py:127
+#: trelby/trelbyframe.py:127 trelby/trelbyframe.py:236
 msgid "Fullscreen"
 msgstr "Fullscreen"
 
-#: trelby/trelbyframe.py:130
+#: trelby/trelbyframe.py:130 trelby/trelbyframe.py:241
 msgid "Find next error"
 msgstr "Find next error"
 
-#: trelby/trelbyframe.py:131
+#: trelby/trelbyframe.py:131 trelby/trelbyframe.py:244
 msgid "Paginate"
 msgstr "Paginate"
 
-#: trelby/trelbyframe.py:136
+#: trelby/trelbyframe.py:136 trelby/trelbyframe.py:252
 msgid "Headers"
 msgstr "Headers"
 
-#: trelby/trelbyframe.py:139
+#: trelby/trelbyframe.py:139 trelby/trelbyframe.py:262
 msgid "Spell checker dictionary..."
 msgstr "Spell checker dictionary..."
 
-#: trelby/trelbyframe.py:152
+#: trelby/trelbyframe.py:152 trelby/trelbyframe.py:286
 msgid "Script report"
 msgstr "Script report"
 
-#: trelby/trelbyframe.py:154
+#: trelby/trelbyframe.py:154 trelby/trelbyframe.py:290
 msgid "Location report"
 msgstr "Location report"
 
-#: trelby/trelbyframe.py:156
+#: trelby/trelbyframe.py:156 trelby/trelbyframe.py:293
 msgid "Scene report"
 msgstr "Scene report"
 
-#: trelby/trelbyframe.py:158
+#: trelby/trelbyframe.py:158 trelby/trelbyframe.py:297
 msgid "Character report"
 msgstr "Character report"
 
-#: trelby/trelbyframe.py:161
+#: trelby/trelbyframe.py:161 trelby/trelbyframe.py:301
 msgid "Dialogue chart"
 msgstr "Dialogue chart"
 
-#: trelby/trelbyframe.py:166
+#: trelby/trelbyframe.py:166 trelby/trelbyframe.py:310
 msgid "Name database"
 msgstr "Name database"
 
-#: trelby/trelbyframe.py:169
+#: trelby/trelbyframe.py:169 trelby/trelbyframe.py:317
 msgid "Compare scripts"
 msgstr "Compare scripts"
 
-#: trelby/trelbyframe.py:172
+#: trelby/trelbyframe.py:172 trelby/trelbyframe.py:321
 msgid "Generate watermarked PDFs"
 msgstr "Generate watermarked PDFs"
 
-#: trelby/trelbyframe.py:177
+#: trelby/trelbyframe.py:177 trelby/trelbyframe.py:329
 msgid "Manual"
 msgstr "Manual"
 
-#: trelby/trelbyframe.py:182
+#: trelby/trelbyframe.py:182 trelby/trelbyframe.py:338
 msgid "File"
 msgstr "File"
 
-#: trelby/trelbyframe.py:183
+#: trelby/trelbyframe.py:183 trelby/trelbyframe.py:339
 msgid "Edit"
 msgstr "Edit"
 
-#: trelby/trelbyframe.py:184
+#: trelby/trelbyframe.py:184 trelby/trelbyframe.py:340
 msgid "View"
 msgstr "View"
 
 #: trelby/trelbyframe.py:185 trelby/trelbyframe.py:864
-#: trelby/trelbyframe.py:892
+#: trelby/trelbyframe.py:892 trelby/trelbyframe.py:341
+#: trelby/trelbyframe.py:1040 trelby/trelbyframe.py:1068
 msgid "Script"
 msgstr "Script"
 
-#: trelby/trelbyframe.py:186
+#: trelby/trelbyframe.py:186 trelby/trelbyframe.py:342
 msgid "Reports"
 msgstr "Reports"
 
-#: trelby/trelbyframe.py:188
+#: trelby/trelbyframe.py:188 trelby/trelbyframe.py:344
 msgid "Help"
 msgstr "Help"
 
-#: trelby/trelbyframe.py:215
+#: trelby/trelbyframe.py:215 trelby/trelbyframe.py:372
 msgid "Open Script"
 msgstr "Open Script"
 
-#: trelby/trelbyframe.py:284
+#: trelby/trelbyframe.py:284 trelby/trelbyframe.py:442
 msgid "Scene"
 msgstr "Scene"
 
-#: trelby/trelbyframe.py:285
+#: trelby/trelbyframe.py:285 trelby/trelbyframe.py:445
 msgid "Action"
 msgstr "Action"
 
-#: trelby/trelbyframe.py:286
+#: trelby/trelbyframe.py:286 trelby/trelbyframe.py:448
 msgid "Character"
 msgstr "Character"
 
-#: trelby/trelbyframe.py:287
+#: trelby/trelbyframe.py:287 trelby/trelbyframe.py:451
 msgid "Parenthetical"
 msgstr "Parenthetical"
 
-#: trelby/trelbyframe.py:289
+#: trelby/trelbyframe.py:289 trelby/trelbyframe.py:457
 msgid "Transition"
 msgstr "Transition"
 
-#: trelby/trelbyframe.py:290
+#: trelby/trelbyframe.py:290 trelby/trelbyframe.py:460
 msgid "Shot"
 msgstr "Shot"
 
-#: trelby/trelbyframe.py:291
+#: trelby/trelbyframe.py:291 trelby/trelbyframe.py:463
 msgid "Act break"
 msgstr "Act break"
 
-#: trelby/trelbyframe.py:292
+#: trelby/trelbyframe.py:292 trelby/trelbyframe.py:466
 msgid "Note"
 msgstr "Note"
 
@@ -2393,32 +2482,46 @@ msgstr "Note"
 #: trelby/trelbyframe.py:630 trelby/trelbyframe.py:633
 #: trelby/trelbyframe.py:636 trelby/trelbyframe.py:684
 #: trelby/trelbyframe.py:711 trelby/trelbyframe.py:868
-#: trelby/trelbyframe.py:895
+#: trelby/trelbyframe.py:895 trelby/trelbyframe.py:766
+#: trelby/trelbyframe.py:792 trelby/trelbyframe.py:799
+#: trelby/trelbyframe.py:803 trelby/trelbyframe.py:806
+#: trelby/trelbyframe.py:809 trelby/trelbyframe.py:812
+#: trelby/trelbyframe.py:860 trelby/trelbyframe.py:887
+#: trelby/trelbyframe.py:1044 trelby/trelbyframe.py:1071
 msgid "files"
 msgstr "files"
 
 #: trelby/trelbyframe.py:592 trelby/trelbyframe.py:638
 #: trelby/trelbyframe.py:686 trelby/trelbyframe.py:713
 #: trelby/trelbyframe.py:870 trelby/trelbyframe.py:897
+#: trelby/trelbyframe.py:768 trelby/trelbyframe.py:814
+#: trelby/trelbyframe.py:862 trelby/trelbyframe.py:889
+#: trelby/trelbyframe.py:1046 trelby/trelbyframe.py:1073
 msgid "All files"
 msgstr "All files"
 
-#: trelby/trelbyframe.py:614
+#: trelby/trelbyframe.py:614 trelby/trelbyframe.py:790
 msgid "Importable"
 msgstr "Importable"
 
-#: trelby/trelbyframe.py:621
+#: trelby/trelbyframe.py:621 trelby/trelbyframe.py:797
 msgid "text"
 msgstr "text"
 
 #: trelby/trelbyframe.py:682 trelby/trelbyframe.py:709
+#: trelby/trelbyframe.py:858 trelby/trelbyframe.py:885
 msgid "Setting"
 msgstr "Setting"
 
 #: trelby/trelbyframe.py:866 trelby/trelbyframe.py:894
+#: trelby/trelbyframe.py:1042 trelby/trelbyframe.py:1070
 msgid "setting"
 msgstr "setting"
 
-#: trelby/trelbyframe.py:970
+#: trelby/trelbyframe.py:970 trelby/trelbyframe.py:1146
 msgid "Don't save"
 msgstr "Don't save"
+
+#: trelby/trelbyframe.py:113 trelby/trelbyframe.py:377
+msgid "Print to PDF"
+msgstr "Print to PDF"
