@@ -24,7 +24,7 @@ class PDFFontsPanel(wx.Panel):
                 self,
                 -1,
                 _(
-                    "Leave all the fields empty to use the default PDF Courier\nfonts. This is highly recommended.\n\nOtherwise, fill in the the font filename to use\nthe specified TrueType font. \nSee the manual for the full details.\n"
+                    "Leave all the fields empty to use the default PDF Courier\nfonts. This is highly recommended.\n\nOtherwise, fill in the font filename to use\nthe specified TrueType font. \nSee the manual for the full details.\n"
                 ),
             )
         )
