@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trelby 2.4.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-07 14:37+0200\n"
+"POT-Creation-Date: 2026-08-07 22:15+0200\n"
 "PO-Revision-Date: 2026-08-07 14:34+0200\n"
 "Last-Translator: Gwyn Ciesla <gwync@protonmail.com>\n"
 "Language-Team: \n"
@@ -1228,10 +1228,6 @@ msgstr "Replaced {} matches"
 #: trelby/trelbyctrl.py:916 trelby/trelbyctrl.py:959
 msgid "Results"
 msgstr "Results"
-
-#: trelby/globaldata.py:70
-msgid "Files"
-msgstr "Files"
 
 #: trelby/globaldata.py:96
 #, python-brace-format
@@ -2474,6 +2470,9 @@ msgstr "PDFs generated"
 #: trelby/watermarkdlg.py:171
 msgid "No watermarks specified."
 msgstr "No watermarks specified."
+
+#~ msgid "Files"
+#~ msgstr "Files"
 
 #~ msgid "Strings"
 #~ msgstr "Strings"

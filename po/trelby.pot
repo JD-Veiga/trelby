@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trelby 2.4.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-07 14:37+0200\n"
+"POT-Creation-Date: 2026-08-07 22:15+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1189,10 +1189,6 @@ msgstr ""
 #: trelby/spellcheckdlg.py:206 trelby/trelbyctrl.py:658
 #: trelby/trelbyctrl.py:916 trelby/trelbyctrl.py:959
 msgid "Results"
-msgstr ""
-
-#: trelby/globaldata.py:70
-msgid "Files"
 msgstr ""
 
 #: trelby/globaldata.py:96
