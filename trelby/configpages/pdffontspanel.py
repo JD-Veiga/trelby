@@ -42,7 +42,7 @@ class PDFFontsPanel(wx.Panel):
 
         for pfi in self.cfg.getPDFFontIds():
             pf = self.cfg.getPDFFont(pfi)
-            self.typeCombo.Append(pf.name, pf)
+            self.typeCombo.Append(_(pf.name), pf)
 
         hsizer.Add(self.typeCombo, 0)
 
@@ -110,10 +110,10 @@ class PDFFontsPanel(wx.Panel):
 
         dlg = wx.FileDialog(
             self.cfgFrame,
-            "Choose font file",
+            _("Choose font file"),
             defaultDir=dDir,
             defaultFile=dFile,
-            wildcard="TrueType fonts (*.ttf;*.TTF)|*.ttf;*.TTF|All files|*",
+            wildcard=_("TrueType fonts (*.ttf;*.TTF)|*.ttf;*.TTF|All files|*"),
             style=wx.FD_OPEN,
         )
 

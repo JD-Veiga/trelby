@@ -22,7 +22,7 @@ class ElementsGlobalPanel(wx.Panel):
         self.elementsCombo = wx.ComboBox(self, -1, style=wx.CB_READONLY)
 
         for t in config.getTIs():
-            self.elementsCombo.Append(t.name, t.lt)
+            self.elementsCombo.Append(_(t.name), t.lt)
 
         hsizer.Add(self.elementsCombo, 0)
 
@@ -57,7 +57,7 @@ class ElementsGlobalPanel(wx.Panel):
         combo = wx.ComboBox(parent, -1, style=wx.CB_READONLY)
 
         for t in config.getTIs():
-            combo.Append(t.name, t.lt)
+            combo.Append(_(t.name), t.lt)
 
         sizer.Add(combo)
 

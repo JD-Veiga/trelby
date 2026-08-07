@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trelby 2.4.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-07 12:04+0200\n"
-"PO-Revision-Date: 2026-08-07 12:11+0200\n"
+"POT-Creation-Date: 2026-08-07 14:37+0200\n"
+"PO-Revision-Date: 2026-08-07 14:34+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es_ES\n"
@@ -87,8 +87,8 @@ msgid "PDF/Fonts"
 msgstr "PDF / Fuentes"
 
 #: trelby/cfgdlg.py:51
-msgid "Strings"
-msgstr "Textos"
+msgid "More && Continued"
+msgstr "Más y Continúa"
 
 #: trelby/cfgdlg.py:61 trelby/gutil.py:56 trelby/headersdlg.py:157
 msgid "Apply"
@@ -170,7 +170,7 @@ msgstr "Comando"
 msgid "No key defined"
 msgstr "Tecla no definida"
 
-#: trelby/commandsdlg.py:92 trelby/trelbyctrl.py:1030 trelby/trelbyframe.py:706
+#: trelby/commandsdlg.py:92 trelby/trelbyctrl.py:1028 trelby/trelbyframe.py:706
 #: trelby/trelbyframe.py:890
 msgid "Filename to save as"
 msgstr "Nombre del archivo a guardar como"
@@ -193,7 +193,7 @@ msgstr "Abrir la ventana de auto-completado."
 
 #: trelby/config.py:705
 msgid "Change current element's style to act break."
-msgstr "Cambiar el estilo del elemento actual a Cambio de Acto."
+msgstr "Cambiar el estilo del elemento actual a Nuevo Acto."
 
 #: trelby/config.py:710
 msgid "Change current element's style to action."
@@ -662,10 +662,11 @@ msgid "Page break lines to show"
 msgstr "Líneas de salto de página a mostrar"
 
 #: trelby/configpages/displaypanel.py:75
+#: trelby/configpages/keyboardpanel.py:132
 msgid "None"
 msgstr "Ninguna"
 
-#: trelby/configpages/displaypanel.py:75
+#: trelby/configpages/displaypanel.py:75 trelby/configpages/displaypanel.py:130
 msgid "Normal"
 msgstr "Normal"
 
@@ -693,13 +694,29 @@ msgstr ""
 #: trelby/myimport.py:389 trelby/myimport.py:446 trelby/myimport.py:773
 #: trelby/myimport.py:816 trelby/namesdlg.py:51 trelby/reports.py:58
 #: trelby/splash.py:167 trelby/trelby.py:48 trelby/trelby.py:65
-#: trelby/trelby.py:75 trelby/trelbyctrl.py:135 trelby/trelbyctrl.py:604
-#: trelby/trelbyctrl.py:632 trelby/trelbyframe.py:531 trelby/trelbyframe.py:928
+#: trelby/trelby.py:75 trelby/trelbyctrl.py:135 trelby/trelbyctrl.py:602
+#: trelby/trelbyctrl.py:630 trelby/trelbyframe.py:531 trelby/trelbyframe.py:928
 #: trelby/util.py:1001 trelby/util.py:1035 trelby/util.py:1062
 #: trelby/util.py:1251 trelby/watermarkdlg.py:105 trelby/watermarkdlg.py:158
 #: trelby/watermarkdlg.py:171
 msgid "Error"
 msgstr "Error"
+
+#: trelby/configpages/displaypanel.py:130
+#: trelby/configpages/elementspanel.py:146 trelby/headersdlg.py:140
+#: trelby/titlesdlg.py:180
+msgid "Bold"
+msgstr "Negrita"
+
+#: trelby/configpages/displaypanel.py:130
+msgid "Bold-Italic"
+msgstr "Negrita-Cursiva"
+
+#: trelby/configpages/displaypanel.py:130
+#: trelby/configpages/elementspanel.py:145 trelby/headersdlg.py:141
+#: trelby/titlesdlg.py:181
+msgid "Italic"
+msgstr "Cursiva"
 
 #: trelby/configpages/displaypanel.py:154
 msgid "Fonts have different widths"
@@ -758,16 +775,6 @@ msgstr "Ancho:"
 msgid "Caps"
 msgstr "Mayúsculas"
 
-#: trelby/configpages/elementspanel.py:145 trelby/headersdlg.py:141
-#: trelby/titlesdlg.py:181
-msgid "Italic"
-msgstr "Cursiva"
-
-#: trelby/configpages/elementspanel.py:146 trelby/headersdlg.py:140
-#: trelby/titlesdlg.py:180
-msgid "Bold"
-msgstr "Negrita"
-
 #: trelby/configpages/elementspanel.py:147 trelby/headersdlg.py:142
 #: trelby/titlesdlg.py:182
 msgid "Underlined"
@@ -815,7 +822,7 @@ msgstr "Incluir los números de las escenas"
 
 #: trelby/configpages/formattingpanel.py:65
 msgid "Show line numbers (debug)"
-msgstr "Mostrar los números de línea (debug)"
+msgstr "Mostrar los números de línea (depuración)"
 
 #: trelby/configpages/globalaboutpanel.py:7
 msgid ""
@@ -1025,6 +1032,14 @@ msgstr "Nombre:"
 msgid "File:"
 msgstr "Archivo:"
 
+#: trelby/configpages/pdffontspanel.py:113
+msgid "Choose font file"
+msgstr "Escoja un arquivo de fuentes"
+
+#: trelby/configpages/pdffontspanel.py:116
+msgid "TrueType fonts (*.ttf;*.TTF)|*.ttf;*.TTF|All files|*"
+msgstr "Fuentes TrueType (*.ttf;*.TTF)|*.ttf;*.TTF|Todos los archivos|*"
+
 #: trelby/configpages/pdffontspanel.py:161
 #, python-brace-format
 msgid ""
@@ -1090,6 +1105,22 @@ msgstr ""
 "Estos ajustes serán guardados dentro del propio guion.\n"
 "Si está buscando los ajustes de la interfaz de usuario (colores, atajos\n"
 "de teclado, etc.), se encuentran Archivo/Ajustes."
+
+#: trelby/configpages/stringspanel.py:20
+msgid "(CONTINUED)"
+msgstr "(CONTINÚA)"
+
+#: trelby/configpages/stringspanel.py:21
+msgid "CONTINUED:"
+msgstr "CONTINUED:"
+
+#: trelby/configpages/stringspanel.py:22
+msgid "(MORE)"
+msgstr "(MÁS)"
+
+#: trelby/configpages/stringspanel.py:23
+msgid " (cont'd)"
+msgstr " (cont.)"
 
 #: trelby/dialoguechart.py:22
 msgid "Characters with < 10 lines"
@@ -1200,8 +1231,8 @@ msgid "Replaced {} matches"
 msgstr "{} coincidencias reemplazadas"
 
 #: trelby/finddlg.py:465 trelby/spellcheckdlg.py:101
-#: trelby/spellcheckdlg.py:206 trelby/trelbyctrl.py:660
-#: trelby/trelbyctrl.py:918 trelby/trelbyctrl.py:961
+#: trelby/spellcheckdlg.py:206 trelby/trelbyctrl.py:658
+#: trelby/trelbyctrl.py:916 trelby/trelbyctrl.py:959
 msgid "Results"
 msgstr "Resultados"
 
@@ -1290,6 +1321,10 @@ msgstr "Ignorar"
 #: trelby/importdlg.py:47
 msgid "Lines:"
 msgstr "Líneas:"
+
+#: trelby/locationreport.py:62 trelby/scenereport.py:38
+msgid "Speakers"
+msgstr "Personajes con diálogo"
 
 #: trelby/locationreport.py:94
 #, python-brace-format
@@ -1445,7 +1480,7 @@ msgstr "Base de datos de nombres"
 msgid "Count"
 msgstr "Total"
 
-#: trelby/namesdlg.py:82
+#: trelby/namesdlg.py:82 trelby/namesdlg.py:283
 msgid "Type"
 msgstr "Tipo"
 
@@ -1461,13 +1496,37 @@ msgstr "Buscar"
 msgid "Insert"
 msgstr "Insertar"
 
-#: trelby/namesdlg.py:131
+#: trelby/namesdlg.py:131 trelby/namesdlg.py:282
 msgid "Name"
 msgstr "Nombre"
 
-#: trelby/namesdlg.py:141
+#: trelby/namesdlg.py:134
+msgid "begins with"
+msgstr "empieza por"
+
+#: trelby/namesdlg.py:134
+msgid "contains"
+msgstr "contiene"
+
+#: trelby/namesdlg.py:134
+msgid "ends in"
+msgstr "termina en"
+
+#: trelby/namesdlg.py:141 trelby/namesdlg.py:284
 msgid "Sex"
 msgstr "Género"
+
+#: trelby/namesdlg.py:144
+msgid "Both"
+msgstr "Cualquiera"
+
+#: trelby/namesdlg.py:144 trelby/namesdlg.py:280
+msgid "Female"
+msgstr "Femenino"
+
+#: trelby/namesdlg.py:144 trelby/namesdlg.py:280
+msgid "Male"
+msgstr "Masculino"
 
 #: trelby/namesdlg.py:151
 msgid "Results:"
@@ -1526,10 +1585,6 @@ msgstr ""
 #: trelby/reports.py:73
 msgid "Characters to include:"
 msgstr "Personajes a incluir:"
-
-#: trelby/scenereport.py:38
-msgid "Speakers"
-msgstr "Personajes con diálogo"
 
 #: trelby/scenereport.py:55
 #, python-brace-format
@@ -1816,30 +1871,38 @@ msgstr "Opciones de salida"
 msgid "Include Notes"
 msgstr "Incluir Notas"
 
+#: trelby/trelbyctrl.py:232
+msgid "untitled"
+msgstr "sin título"
+
 #: trelby/trelbyctrl.py:412
 #, python-brace-format
 msgid ""
 "The script seems to contain errors.\n"
 "Are you sure you want to {} it?"
-msgstr "El guion parece que contiene errores. ¿Está seguro que quiere {}?"
+msgstr "El guion parece que contiene errores. ¿Está seguro de que quiere {}?"
 
-#: trelby/trelbyctrl.py:416 trelby/trelbyctrl.py:670
+#: trelby/trelbyctrl.py:414 trelby/trelbyctrl.py:668
 msgid "Confirm"
 msgstr "Confirmar"
 
-#: trelby/trelbyctrl.py:603
+#: trelby/trelbyctrl.py:601
 msgid "You need at least two scripts open to compare them."
 msgstr "Se necesitan al menos dos guiones para compararlos."
 
-#: trelby/trelbyctrl.py:631
+#: trelby/trelbyctrl.py:629
 msgid "You can't compare a script to itself."
 msgstr "No es posible comparar un guion consigo mismo."
 
-#: trelby/trelbyctrl.py:660
+#: trelby/trelbyctrl.py:640 trelby/trelbyctrl.py:641
+msgid "compare"
+msgstr "comparar"
+
+#: trelby/trelbyctrl.py:658
 msgid "The scripts are identical."
 msgstr "Los guiones son idénticos."
 
-#: trelby/trelbyctrl.py:668
+#: trelby/trelbyctrl.py:666
 msgid ""
 "The script has been modified. Are you sure\n"
 "you want to discard the changes?"
@@ -1847,37 +1910,37 @@ msgstr ""
 "El guion ha sido modificado. ¿Está seguro\n"
 "que quiere descartar los cambios?"
 
-#: trelby/trelbyctrl.py:849
+#: trelby/trelbyctrl.py:847
 msgid "Invalid scene number."
 msgstr "Número de escena no válido."
 
-#: trelby/trelbyctrl.py:853
+#: trelby/trelbyctrl.py:851
 #, python-brace-format
 msgid "Enter scene number ({} - {}):"
 msgstr "Introduzca el número de escena ({} - {}):"
 
-#: trelby/trelbyctrl.py:854 trelby/trelbyframe.py:100
+#: trelby/trelbyctrl.py:852 trelby/trelbyframe.py:100
 msgid "Goto scene"
 msgstr "Ir a la escena"
 
-#: trelby/trelbyctrl.py:881
+#: trelby/trelbyctrl.py:879
 msgid "Invalid page number."
 msgstr "Número de página no válido."
 
-#: trelby/trelbyctrl.py:885
+#: trelby/trelbyctrl.py:883
 #, python-brace-format
 msgid "Enter page number ({} - {}):"
 msgstr "Introduzca el número de página ({} - {}):"
 
-#: trelby/trelbyctrl.py:886 trelby/trelbyframe.py:99
+#: trelby/trelbyctrl.py:884 trelby/trelbyframe.py:99
 msgid "Goto page"
 msgstr "Ir a la página"
 
-#: trelby/trelbyctrl.py:916
+#: trelby/trelbyctrl.py:914
 msgid "No errors found."
 msgstr "Se han encontrado errores."
 
-#: trelby/trelbyctrl.py:957
+#: trelby/trelbyctrl.py:955
 msgid ""
 "\n"
 "\n"
@@ -1889,23 +1952,35 @@ msgstr ""
 "(La posición inicial no está\n"
 "al principio del guion.)"
 
-#: trelby/trelbyctrl.py:960
+#: trelby/trelbyctrl.py:958
 msgid "Spell checker found no errors."
 msgstr "El corrector ortográfico no encontró errores."
 
-#: trelby/trelbyctrl.py:992 trelby/trelbyframe.py:106
+#: trelby/trelbyctrl.py:990 trelby/trelbyframe.py:106
 msgid "Delete elements"
 msgstr "Eliminar elementos"
 
-#: trelby/trelbyctrl.py:994
+#: trelby/trelbyctrl.py:992
 msgid "Element types to delete:"
 msgstr "Tipos de elementos a eliminar:"
 
-#: trelby/trelbyctrl.py:1048
+#: trelby/trelbyctrl.py:1031
+msgid "Trelby files (*.trelby)|*.trelby|All files|*"
+msgstr "Archivos Trelby (*.trelby)|*.trelby|Todos los archivos|*"
+
+#: trelby/trelbyctrl.py:1040
+msgid "export"
+msgstr "exportar"
+
+#: trelby/trelbyctrl.py:1046
 msgid "Filename to export as"
 msgstr "Nombre de archivo a exportar como"
 
-#: trelby/trelbyctrl.py:1263
+#: trelby/trelbyctrl.py:1088
+msgid "print"
+msgstr "imprimir"
+
+#: trelby/trelbyctrl.py:1261
 msgid "{.5f} seconds per {}"
 msgstr "{.5f} segundos por {}"
 
@@ -2184,7 +2259,7 @@ msgstr "Plano"
 
 #: trelby/trelbyframe.py:291
 msgid "Act break"
-msgstr "Cambio de acto"
+msgstr "Nuevo Acto"
 
 #: trelby/trelbyframe.py:292
 msgid "Note"
@@ -2403,3 +2478,6 @@ msgstr "PDFs generados"
 #: trelby/watermarkdlg.py:171
 msgid "No watermarks specified."
 msgstr "Marcas de agua no especificadas."
+
+#~ msgid "Strings"
+#~ msgstr "Textos"
