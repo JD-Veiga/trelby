@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trelby 2.4.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-07 03:57+0200\n"
-"PO-Revision-Date: 2026-08-07 01:18+0200\n"
+"POT-Creation-Date: 2026-08-07 12:04+0200\n"
+"PO-Revision-Date: 2026-08-07 12:09+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: it\n"
@@ -724,9 +724,13 @@ msgstr "Passa scheda a"
 msgid "Shift+Tab switches to"
 msgstr "Shift+Tab passa a"
 
-#: trelby/configpages/elementsglobalpanel.py:66
-msgid "Combo"
-msgstr "Combinazione"
+#: trelby/configpages/elementspanel.py:37
+msgid "Screen"
+msgstr "Schermo"
+
+#: trelby/configpages/elementspanel.py:38
+msgid "Print"
+msgstr "Stampa"
 
 #: trelby/configpages/elementspanel.py:45
 msgid "Empty lines / 10 before:"
@@ -753,15 +757,18 @@ msgstr "Larghezza:"
 msgid "Caps"
 msgstr "Maiuscole"
 
-#: trelby/configpages/elementspanel.py:145
+#: trelby/configpages/elementspanel.py:145 trelby/headersdlg.py:141
+#: trelby/titlesdlg.py:181
 msgid "Italic"
 msgstr "Corsivo"
 
-#: trelby/configpages/elementspanel.py:146
+#: trelby/configpages/elementspanel.py:146 trelby/headersdlg.py:140
+#: trelby/titlesdlg.py:180
 msgid "Bold"
 msgstr "Grassetto"
 
-#: trelby/configpages/elementspanel.py:147
+#: trelby/configpages/elementspanel.py:147 trelby/headersdlg.py:142
+#: trelby/titlesdlg.py:182
 msgid "Underlined"
 msgstr "Sottolineato"
 
@@ -936,10 +943,6 @@ msgstr ""
 msgid "Lines to scroll per mouse wheel event:"
 msgstr "Righe da scorrere con la rotellina del mouse:"
 
-#: trelby/configpages/miscpanel.py:150
-msgid "Entry"
-msgstr "Annotazione"
-
 #: trelby/configpages/miscpanel.py:184
 msgid "Choose program"
 msgstr "Scegli programma"
@@ -981,6 +984,14 @@ msgstr "Sinistra"
 #: trelby/titlesdlg.py:120
 msgid "Right"
 msgstr "Destra"
+
+#: trelby/configpages/paperpanel.py:69 trelby/configpages/paperpanel.py:116
+msgid "inch"
+msgstr "in"
+
+#: trelby/configpages/paperpanel.py:69 trelby/configpages/paperpanel.py:111
+msgid "mm"
+msgstr "mm"
 
 #: trelby/configpages/paperpanel.py:130
 #, python-brace-format
@@ -1047,8 +1058,8 @@ msgid "Omit Note elements"
 msgstr "Ometti elementi delle Note"
 
 #: trelby/configpages/pdfpanel.py:32
-msgid "  Draw rectangles around Note elements"
-msgstr "  Disegna rettangoli attorno agli elementi della nota"
+msgid "Draw rectangles around Note elements"
+msgstr "Disegna rettangoli attorno agli elementi della nota"
 
 #: trelby/configpages/pdfpanel.py:35
 msgid "Show margins (debug)"

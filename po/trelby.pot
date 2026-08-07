@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trelby 2.4.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-07 03:57+0200\n"
+"POT-Creation-Date: 2026-08-07 12:04+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -719,8 +719,12 @@ msgstr ""
 msgid "Shift+Tab switches to"
 msgstr ""
 
-#: trelby/configpages/elementsglobalpanel.py:66
-msgid "Combo"
+#: trelby/configpages/elementspanel.py:37
+msgid "Screen"
+msgstr ""
+
+#: trelby/configpages/elementspanel.py:38
+msgid "Print"
 msgstr ""
 
 #: trelby/configpages/elementspanel.py:45
@@ -748,15 +752,18 @@ msgstr ""
 msgid "Caps"
 msgstr ""
 
-#: trelby/configpages/elementspanel.py:145
+#: trelby/configpages/elementspanel.py:145 trelby/headersdlg.py:141
+#: trelby/titlesdlg.py:181
 msgid "Italic"
 msgstr ""
 
-#: trelby/configpages/elementspanel.py:146
+#: trelby/configpages/elementspanel.py:146 trelby/headersdlg.py:140
+#: trelby/titlesdlg.py:180
 msgid "Bold"
 msgstr ""
 
-#: trelby/configpages/elementspanel.py:147
+#: trelby/configpages/elementspanel.py:147 trelby/headersdlg.py:142
+#: trelby/titlesdlg.py:182
 msgid "Underlined"
 msgstr ""
 
@@ -916,10 +923,6 @@ msgstr ""
 msgid "Lines to scroll per mouse wheel event:"
 msgstr ""
 
-#: trelby/configpages/miscpanel.py:150
-msgid "Entry"
-msgstr ""
-
 #: trelby/configpages/miscpanel.py:184
 msgid "Choose program"
 msgstr ""
@@ -960,6 +963,14 @@ msgstr ""
 #: trelby/configpages/paperpanel.py:63 trelby/headersdlg.py:121
 #: trelby/titlesdlg.py:120
 msgid "Right"
+msgstr ""
+
+#: trelby/configpages/paperpanel.py:69 trelby/configpages/paperpanel.py:116
+msgid "inch"
+msgstr ""
+
+#: trelby/configpages/paperpanel.py:69 trelby/configpages/paperpanel.py:111
+msgid "mm"
 msgstr ""
 
 #: trelby/configpages/paperpanel.py:130
@@ -1017,7 +1028,7 @@ msgid "Omit Note elements"
 msgstr ""
 
 #: trelby/configpages/pdfpanel.py:32
-msgid "  Draw rectangles around Note elements"
+msgid "Draw rectangles around Note elements"
 msgstr ""
 
 #: trelby/configpages/pdfpanel.py:35
