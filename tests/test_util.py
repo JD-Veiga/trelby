@@ -1,4 +1,4 @@
-# -*- coding: iso-8859-1 -*-
+# -*- coding: utf-8 -*-
 
 from tests import u
 from trelby import util
@@ -29,7 +29,7 @@ def testSplitToWords():
     assert us("") == []
     assert us("yo") == ["yo"]
     assert us("yo foo") == ["yo", "foo"]
-    assert us("äksy yö") == ["äksy", "yö"]
+    assert us("Ã¤ksy yÃ¶") == ["Ã¤ksy", "yÃ¶"]
     assert us("Mixed CASE") == ["Mixed", "CASE"]
     assert us("out-of-nowhere, a monkey appears, bearing fruit!") == [
         "out",
@@ -42,7 +42,7 @@ def testSplitToWords():
         "fruit",
     ]
     assert us("don't assume -- it blaa") == ["don't", "assume", "it", "blaa"]
-    assert us("a''b--c|d®e") == ["a''b", "c", "d", "e"]
+    assert us("a''b--c|dÂ®e") == ["a''b", "c", "d", "e"]
 
 
 # def testToUTF8():
@@ -52,7 +52,7 @@ def testSplitToWords():
 #
 #    assert t("") == ""
 #    assert t("yo") == "yo"
-#    assert t("yö") == "yÃ¶"
+#    assert t("yÃ¶") == "yÃƒÂ¶"
 
 # def testFromUTF8():
 #    u.init()
@@ -61,8 +61,8 @@ def testSplitToWords():
 #
 #    assert f("") == ""
 #    assert f("yo") == "yo"
-#    assert f("yÃ¶") == "yö"
-#    assert f("yö12345") == "y12345"
+#    assert f("yÃƒÂ¶") == "yÃ¶"
+#    assert f("yÃ¶12345") == "y12345"
 #    assert f("a\xE2\x82\xACb") == "ab"
 
 

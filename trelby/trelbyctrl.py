@@ -1,4 +1,4 @@
-# -*- coding: iso-8859-1 -*-
+# -*- coding: utf-8 -*-
 
 import copy
 import os
@@ -1293,11 +1293,11 @@ class MyCtrl(wx.Control):
             if addChar:
                 cs.char = chr(kc)
 
-                if opts.is_test_mode and (cs.char == "å"):
+                if opts.is_test_mode and (cs.char == "Ã¥"):
                     self.loadFile("sample.trelby")
-                elif opts.is_test_mode and (cs.char == "¤"):
+                elif opts.is_test_mode and (cs.char == "Â¤"):
                     self.cmdTest(cs)
-                elif opts.is_test_mode and (cs.char == "½"):
+                elif opts.is_test_mode and (cs.char == "Â½"):
                     self.cmdSpeedTest(cs)
                 else:
                     self.sp.addCharCmd(cs)
