@@ -34,5 +34,14 @@ ruff.toml
 # git specifics
 .pre-commit-config.yaml
 
+# macOS specific
+*.DS_Store
+
+# coverage specific
+.coverage
+
+# git specifics
+.pre-commit-config.yaml
+
 #Choco
 *.nupkg
