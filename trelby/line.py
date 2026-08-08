@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-import trelby.config as config
+from trelby import config
 
 # constants that could not be removed yet
 from trelby.screenplay import ACTION, LB_LAST

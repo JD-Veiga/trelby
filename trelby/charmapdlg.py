@@ -1,7 +1,7 @@
 import wx
 
-import trelby.gutil as gutil
-import trelby.util as util
+from trelby import gutil
+from trelby import util
 
 
 class CharMapDlg(wx.Dialog):

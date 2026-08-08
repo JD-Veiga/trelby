@@ -1,4 +1,4 @@
-import trelby.pml as pml
+from trelby import pml
 
 # character widths and general font information for each font. acquired
 # from the PDF font metrics. ((width / 1000) * point_size) / 72.0 = how

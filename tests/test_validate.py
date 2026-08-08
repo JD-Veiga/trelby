@@ -1,6 +1,6 @@
-import tests.u as u
+from tests import u
 import trelby.screenplay as scr
-import trelby.translations as translations
+from trelby import translations
 
 _ = translations.trelby_translations_load()
 

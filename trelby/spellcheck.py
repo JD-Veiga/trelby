@@ -1,6 +1,6 @@
 import trelby
-import trelby.mypickle as mypickle
-import trelby.util as util
+from trelby import mypickle
+from trelby import util
 
 # words loaded from dict_en.dat.
 gdict = set()

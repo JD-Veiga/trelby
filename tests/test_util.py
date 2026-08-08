@@ -1,7 +1,7 @@
 # -*- coding: iso-8859-1 -*-
 
-import tests.u as u
-import trelby.util as util
+from tests import u
+from trelby import util
 
 # test util stuff
 

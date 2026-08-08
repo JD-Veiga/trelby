@@ -8,26 +8,26 @@ import time
 import wx
 
 import trelby
-import trelby.autocompletiondlg as autocompletiondlg
-import trelby.cfgdlg as cfgdlg
-import trelby.config as config
-import trelby.dialoguechart as dialoguechart
-import trelby.finddlg as finddlg
-import trelby.gutil as gutil
-import trelby.headersdlg as headersdlg
-import trelby.locationsdlg as locationsdlg
-import trelby.misc as misc
-import trelby.myimport as myimport
-import trelby.opts as opts
-import trelby.pml as pml
-import trelby.reports as reports
-import trelby.screenplay as screenplay
-import trelby.spellcheck as spellcheck
-import trelby.spellcheckcfgdlg as spellcheckcfgdlg
-import trelby.spellcheckdlg as spellcheckdlg
-import trelby.titlesdlg as titlesdlg
-import trelby.util as util
-import trelby.watermarkdlg as watermarkdlg
+from trelby import autocompletiondlg
+from trelby import cfgdlg
+from trelby import config
+from trelby import dialoguechart
+from trelby import finddlg
+from trelby import gutil
+from trelby import headersdlg
+from trelby import locationsdlg
+from trelby import misc
+from trelby import myimport
+from trelby import opts
+from trelby import pml
+from trelby import reports
+from trelby import screenplay
+from trelby import spellcheck
+from trelby import spellcheckcfgdlg
+from trelby import spellcheckdlg
+from trelby import titlesdlg
+from trelby import util
+from trelby import watermarkdlg
 from trelby.error import TrelbyError
 from trelby.ids import ID_EDIT_REDO, ID_EDIT_UNDO, idToLTMap
 from trelby.line import Line

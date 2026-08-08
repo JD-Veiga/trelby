@@ -1,10 +1,10 @@
-import trelby.characterreport as characterreport
-import trelby.config as config
-import trelby.pdf as pdf
-import trelby.pml as pml
-import trelby.scenereport as scenereport
-import trelby.screenplay as screenplay
-import trelby.util as util
+from trelby import characterreport
+from trelby import config
+from trelby import pdf
+from trelby import pml
+from trelby import scenereport
+from trelby import screenplay
+from trelby import util
 
 
 class ScriptReport:

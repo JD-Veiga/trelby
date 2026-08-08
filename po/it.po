@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trelby 2.4.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-08 11:14+0200\n"
+"POT-Creation-Date: 2026-08-08 12:51+0200\n"
 "PO-Revision-Date: 2026-08-08 11:32+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -696,8 +696,8 @@ msgstr ""
 #: trelby/splash.py:167 trelby/trelby.py:48 trelby/trelby.py:65
 #: trelby/trelby.py:75 trelby/trelbyctrl.py:135 trelby/trelbyctrl.py:602
 #: trelby/trelbyctrl.py:630 trelby/trelbyframe.py:707
-#: trelby/trelbyframe.py:1104 trelby/util.py:1001 trelby/util.py:1035
-#: trelby/util.py:1062 trelby/util.py:1251 trelby/watermarkdlg.py:105
+#: trelby/trelbyframe.py:1104 trelby/util.py:1003 trelby/util.py:1037
+#: trelby/util.py:1064 trelby/util.py:1253 trelby/watermarkdlg.py:105
 #: trelby/watermarkdlg.py:158 trelby/watermarkdlg.py:171
 msgid "Error"
 msgstr "Errore"
@@ -1848,7 +1848,7 @@ msgstr ""
 "\n"
 "{}"
 
-#: trelby/trelbyctrl.py:143 trelby/trelbyframe.py:672 trelby/util.py:1273
+#: trelby/trelbyctrl.py:143 trelby/trelbyframe.py:672 trelby/util.py:1275
 msgid "Warning"
 msgstr "Attenzione"
 
@@ -2366,31 +2366,31 @@ msgstr "Nessun nome Postscript trovato"
 msgid "bools2flags: chars and bools are not equal length"
 msgstr "bools2flags: chars e bools non hanno la stessa lunghezza"
 
-#: trelby/util.py:993
+#: trelby/util.py:995
 #, python-brace-format
 msgid "File too large: {}"
 msgstr "File troppo grande: {}"
 
-#: trelby/util.py:1000
+#: trelby/util.py:1002
 #, python-brace-format
 msgid "Error loading file '{}': {}"
 msgstr "Errore nel caricamento del file '{}': {}"
 
-#: trelby/util.py:1034
+#: trelby/util.py:1036
 #, python-brace-format
 msgid "Error loading file '{}': Decompression failed"
 msgstr "Errore nel caricamento del file '{}': decompressione fallita"
 
-#: trelby/util.py:1061
+#: trelby/util.py:1063
 #, python-brace-format
 msgid "Error writing file '{}': {}"
 msgstr "Errore durante la scrittura del file '{}': {}"
 
-#: trelby/util.py:1140
+#: trelby/util.py:1142
 msgid "{}{} took {.5f} seconds"
 msgstr "{}{} ha impiegato {.5f} secondi"
 
-#: trelby/util.py:1249
+#: trelby/util.py:1251
 msgid ""
 "PDF viewer application not found.\n"
 "\n"
@@ -2402,7 +2402,7 @@ msgstr ""
 "Puoi cambiare il visualizzatore PDF\n"
 "nelle impostazioni in File/Impostazioni/Cambia/Varie."
 
-#: trelby/util.py:1269
+#: trelby/util.py:1271
 #, python-format, python-brace-format
 msgid ""
 "Currently set PDF viewer ({}) was not found.\n"

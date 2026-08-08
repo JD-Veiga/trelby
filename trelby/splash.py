@@ -4,8 +4,8 @@ import random
 
 import wx
 
-import trelby.misc as misc
-import trelby.util as util
+from trelby import misc
+from trelby import util
 
 
 class Quote:

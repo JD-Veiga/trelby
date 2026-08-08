@@ -1,5 +1,5 @@
-import trelby.mypickle as mypickle
-import trelby.util as util
+from trelby import mypickle
+from trelby import util
 
 
 # manages location-information for a single screenplay. a "location" is a

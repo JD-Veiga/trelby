@@ -1,11 +1,11 @@
 import wx
 
-import trelby.gutil as gutil
-import trelby.headers as headers
-import trelby.misc as misc
-import trelby.pdf as pdf
-import trelby.pml as pml
-import trelby.util as util
+from trelby import gutil
+from trelby import headers
+from trelby import misc
+from trelby import pdf
+from trelby import pml
+from trelby import util
 
 
 class HeadersDlg(wx.Dialog):

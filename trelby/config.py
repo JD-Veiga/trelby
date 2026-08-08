@@ -4,11 +4,11 @@
 import copy
 import os
 
-import trelby.misc as misc
-import trelby.mypickle as mypickle
-import trelby.pml as pml
-import trelby.screenplay as screenplay
-import trelby.util as util
+from trelby import misc
+from trelby import mypickle
+from trelby import pml
+from trelby import screenplay
+from trelby import util
 from trelby.error import ConfigError
 
 if "TRELBY_TESTING" in os.environ:

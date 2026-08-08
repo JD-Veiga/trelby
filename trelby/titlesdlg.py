@@ -2,12 +2,12 @@ import copy
 
 import wx
 
-import trelby.gutil as gutil
-import trelby.misc as misc
-import trelby.pdf as pdf
-import trelby.pml as pml
-import trelby.titles as titles
-import trelby.util as util
+from trelby import gutil
+from trelby import misc
+from trelby import pdf
+from trelby import pml
+from trelby import titles
+from trelby import util
 from trelby.titlespreview import TitlesPreview
 
 

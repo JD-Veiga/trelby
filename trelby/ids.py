@@ -1,6 +1,12 @@
 import wx
 
-import trelby.screenplay as screenplay
+from trelby import screenplay
+
+# FIXME: (jdveiga) pollutes global scope with identifiers
+# FIXME: (jdveiga) DeprecationWarning: NewId() is deprecated, use wx.NewIdRef()
+# SEE: (jdveiga) https://wxpython.org/Phoenix/docs/html/wx.functions.html#wx.NewIdRef
+# SEE: (jdveiga) https://wiki.wxpython.org/wxPython%20Style%20Guide
+# SEE: (jdveiga) https://docs.wxpython.org/standard_event_identifiers.html
 
 ID_EDIT_UNDO = wx.NewId()
 ID_EDIT_REDO = wx.NewId()

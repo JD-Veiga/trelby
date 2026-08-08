@@ -1,5 +1,5 @@
-import trelby.trelbyframe as trelbyframe
-import trelby.translations as translations
+from trelby import trelbyframe
+from trelby import translations
 
 
 _ = translations.trelby_translations_load()

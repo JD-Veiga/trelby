@@ -1,9 +1,9 @@
 # -*- coding: iso-8859-1 -*-
 
-import trelby.config as config
-import trelby.mypager as mypager
-import trelby.pml as pml
-import trelby.util as util
+from trelby import config
+from trelby import mypager
+from trelby import pml
+from trelby import util
 
 # Number of lines the smooth scroll will try to search. 15-20 is a good
 # number to use with the layout mode margins we have.

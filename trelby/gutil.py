@@ -1,9 +1,9 @@
 import os
 import tempfile
 
-import trelby.config as config
-import trelby.misc as misc
-import trelby.util as util
+from trelby import config
+from trelby import misc
+from trelby import util
 from trelby.error import MiscError, TrelbyError
 
 if "TRELBY_TESTING" in os.environ:

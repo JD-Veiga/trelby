@@ -1,7 +1,7 @@
-import tests.u as u
-import trelby.locationreport as locationreport
-import trelby.scenereport as scenereport
-import trelby.util as util
+from tests import u
+from trelby import locationreport
+from trelby import scenereport
+from trelby import util
 
 # tests location report (just that it runs without exceptions, for now)
 

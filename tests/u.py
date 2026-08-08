@@ -1,10 +1,10 @@
 # ut:ignore
 import os
 
-import trelby.config as config
-import trelby.misc as misc
-import trelby.screenplay as screenplay
-import trelby.util as util
+from trelby import config
+from trelby import misc
+from trelby import screenplay
+from trelby import util
 
 initDone = False
 

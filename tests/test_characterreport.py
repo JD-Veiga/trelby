@@ -1,6 +1,6 @@
-import tests.u as u
-import trelby.characterreport as characterreport
-import trelby.util as util
+from tests import u
+from trelby import characterreport
+from trelby import util
 
 # tests character report (just that it runs without exceptions, for now)
 

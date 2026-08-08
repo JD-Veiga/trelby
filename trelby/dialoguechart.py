@@ -3,12 +3,12 @@ from typing import List
 
 import wx
 
-import trelby.gutil as gutil
-import trelby.misc as misc
-import trelby.pdf as pdf
-import trelby.pml as pml
-import trelby.screenplay as screenplay
-import trelby.util as util
+from trelby import gutil
+from trelby import misc
+from trelby import pdf
+from trelby import pml
+from trelby import screenplay
+from trelby import util
 
 
 def genDialogueChart(mainFrame, sp):

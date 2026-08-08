@@ -8,12 +8,12 @@ import sys
 import wx
 
 import trelby
-import trelby.config as config
-import trelby.misc as misc
-import trelby.opts as opts
-import trelby.splash as splash
-import trelby.util as util
-import trelby.translations as translations
+from trelby import config
+from trelby import misc
+from trelby import opts
+from trelby import splash
+from trelby import util
+from trelby import translations
 from trelby.globaldata import GlobalData
 from trelby.trelbyframe import MyFrame
 

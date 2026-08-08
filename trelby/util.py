@@ -9,8 +9,8 @@ import tempfile
 import time
 from typing import AnyStr, Optional
 
-import trelby.config as config
-import trelby.misc as misc
+from trelby import config
+from trelby import misc
 
 if "TRELBY_TESTING" in os.environ:
     import unittest.mock as mock
@@ -29,7 +29,7 @@ VALIGN_BOTTOM = 3
 
 # this has to be below the ALIGN stuff, otherwise things break due to
 # circular dependencies
-import trelby.fontinfo as fontinfo
+from trelby import fontinfo
 
 # mappings from lowercase to uppercase letters for different charsets
 _iso_8859_1_map = {
@@ -870,6 +870,8 @@ class Key:
         # we don't want to handle ALT+a/ALT+A etc separately, so uppercase
         # input char combinations
         if (kc < 256) and (ctrl or alt):
+            # TODO: (jdveiga) raises an error if ß is pressed for instance
+            # FROM: https://github.com/trelby/trelby/issues/99
             kc = ord(upper(chr(kc)))
 
         # even though the wxWidgets documentation clearly states that

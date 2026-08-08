@@ -1,7 +1,7 @@
 import copy
 
-import trelby.config as config
-import trelby.util as util
+from trelby import config
+from trelby import util
 
 
 # keep track about one object's variables

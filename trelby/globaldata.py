@@ -5,12 +5,12 @@ import os.path
 
 import wx
 
-import trelby.misc as misc
-import trelby.mypickle as mypickle
-import trelby.opts as opts
-import trelby.spellcheck as spellcheck
-import trelby.util as util
-import trelby.viewmode as viewmode
+from trelby import misc
+from trelby import mypickle
+from trelby import opts
+from trelby import spellcheck
+from trelby import util
+from trelby import viewmode
 
 
 # keeps (hopefully all) global data

@@ -1,4 +1,4 @@
-import tests.u as u
+from tests import u
 from trelby.pagelist import PageList
 
 # test screenplay.PageList

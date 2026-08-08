@@ -1,8 +1,8 @@
 import wx
 
-import trelby.gutil as gutil
-import trelby.misc as misc
-import trelby.util as util
+from trelby import gutil
+from trelby import misc
+from trelby import util
 
 
 class AutoCompletionDlg(wx.Dialog):

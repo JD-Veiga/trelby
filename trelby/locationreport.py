@@ -1,10 +1,10 @@
 import functools
 import operator
 
-import trelby.misc as misc
-import trelby.pdf as pdf
-import trelby.pml as pml
-import trelby.util as util
+from trelby import misc
+from trelby import pdf
+from trelby import pml
+from trelby import util
 from trelby.pagelist import PageList
 
 

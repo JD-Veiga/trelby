@@ -1,6 +1,6 @@
-import trelby.mypickle as mypickle
-import trelby.screenplay as screenplay
-import trelby.util as util
+from trelby import mypickle
+from trelby import screenplay
+from trelby import util
 from trelby.autocompletiontype import AutoCompletionType as Type
 
 

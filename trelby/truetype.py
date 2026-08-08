@@ -1,6 +1,6 @@
 import struct
 
-import trelby.util as util
+from trelby import util
 
 unpack = struct.unpack
 

@@ -33,18 +33,18 @@ from typing import Tuple
 
 from lxml import etree
 
-import trelby.autocompletion as autocompletion
-import trelby.config as config
-import trelby.error as error
-import trelby.headers as headers
-import trelby.locations as locations
-import trelby.mypager as mypager
-import trelby.pdf as pdf
-import trelby.pml as pml
-import trelby.spellcheck as spellcheck
-import trelby.titles as titles
-import trelby.undo as undo
-import trelby.util as util
+from trelby import autocompletion
+from trelby import config
+from trelby import error
+from trelby import headers
+from trelby import locations
+from trelby import mypager
+from trelby import pdf
+from trelby import pml
+from trelby import spellcheck
+from trelby import titles
+from trelby import undo
+from trelby import util
 from trelby.line import Line
 
 

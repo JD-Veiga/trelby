@@ -1,5 +1,5 @@
-import trelby.config as config
-import trelby.mypickle as mypickle
+from trelby import config
+from trelby import mypickle
 
 
 # auto completion info for one element type

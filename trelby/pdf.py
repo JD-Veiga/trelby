@@ -5,7 +5,7 @@ from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.pdfgen.canvas import Canvas
 
-import trelby.pml as pml
+from trelby import pml
 import trelby.pml as util
 
 # PDF transform matrixes where key is the angle from x-axis

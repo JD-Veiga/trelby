@@ -11,14 +11,14 @@ import wx
 import wx.svg
 
 import trelby
-import trelby.charmapdlg as charmapdlg
-import trelby.commandsdlg as commandsdlg
-import trelby.config as config
-import trelby.misc as misc
-import trelby.namesdlg as namesdlg
-import trelby.spellcheckcfgdlg as spellcheckcfgdlg
-import trelby.splash as splash
-import trelby.util as util
+from trelby import charmapdlg
+from trelby import commandsdlg
+from trelby import config
+from trelby import misc
+from trelby import namesdlg
+from trelby import spellcheckcfgdlg
+from trelby import splash
+from trelby import util
 from trelby.ids import *
 from trelby.trelbypanel import MyPanel
 

@@ -15,9 +15,9 @@
 import textwrap
 from typing import AnyStr, Dict, List, Optional, Tuple
 
-import trelby.misc as misc
-import trelby.pdf as pdf
-import trelby.util as util
+from trelby import misc
+from trelby import pdf
+from trelby import util
 
 # text flags. don't change these unless you know what you're doing.
 NORMAL = 0

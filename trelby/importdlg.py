@@ -1,8 +1,8 @@
 import wx
 
-import trelby.config as config
-import trelby.gutil as gutil
-import trelby.util as util
+from trelby import config
+from trelby import gutil
+from trelby import util
 
 
 class ImportDlg(wx.Dialog):

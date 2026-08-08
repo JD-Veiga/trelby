@@ -1,4 +1,4 @@
-import trelby.util as util
+from trelby import util
 import wx
 
 

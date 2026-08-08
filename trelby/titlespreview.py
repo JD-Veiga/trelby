@@ -1,6 +1,6 @@
 import wx
 
-import trelby.util as util
+from trelby import util
 
 
 class TitlesPreview(wx.Window):

@@ -4,9 +4,9 @@ import os.path
 import sys
 from typing import AnyStr
 
-import trelby.gutil as gutil
-import trelby.opts as opts
-import trelby.util as util
+from trelby import gutil
+from trelby import opts
+from trelby import util
 
 if "TRELBY_TESTING" in os.environ:
     import unittest.mock as mock

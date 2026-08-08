@@ -1,5 +1,5 @@
-import trelby.pml as pml
-import trelby.screenplay as screenplay
+from trelby import pml
+from trelby import screenplay
 
 
 # used to iteratively add PML pages to a document

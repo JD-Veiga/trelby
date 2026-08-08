@@ -1,8 +1,8 @@
 import os.path
 
-import trelby.misc as misc
-import trelby.truetype as truetype
-import trelby.util as util
+from trelby import misc
+from trelby import truetype
+from trelby import util
 import wx
 
 

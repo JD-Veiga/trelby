@@ -3,7 +3,7 @@ import xml.sax.saxutils as xss
 import wx
 import wx.html
 
-import trelby.util as util
+from trelby import util
 
 
 class CommandsDlg(wx.Frame):

@@ -1,6 +1,6 @@
 import wx
 
-import trelby.gutil as gutil
+from trelby import gutil
 from trelby.configpages.colorspanel import ColorsPanel
 from trelby.configpages.displaypanel import DisplayPanel
 from trelby.configpages.elementsglobalpanel import ElementsGlobalPanel

@@ -1,10 +1,10 @@
 import wx
 
-import trelby.config as config
-import trelby.gutil as gutil
-import trelby.misc as misc
-import trelby.undo as undo
-import trelby.util as util
+from trelby import config
+from trelby import gutil
+from trelby import misc
+from trelby import undo
+from trelby import util
 
 
 class FindDlg(wx.Dialog):

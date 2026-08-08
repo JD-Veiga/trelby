@@ -1,5 +1,5 @@
-import trelby.pml as pml
-import trelby.util as util
+from trelby import pml
+from trelby import util
 
 
 # a script's headers.
