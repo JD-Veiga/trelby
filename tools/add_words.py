@@ -1,5 +1,8 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 # add words to ../dict_en.dat in the correct place
+
 
 import sys
 

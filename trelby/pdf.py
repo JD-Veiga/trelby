@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+
+
 import uuid
 from typing import AnyStr, Dict, Optional, Tuple
 

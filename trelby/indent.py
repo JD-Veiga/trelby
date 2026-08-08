@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+
+
 # information about one indent level in imported text files.
 class Indent:
     def __init__(self, indent):

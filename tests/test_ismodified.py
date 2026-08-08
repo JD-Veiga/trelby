@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+
+
 from tests import u
 from trelby import config
 import trelby.screenplay as scr

@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+
+
 from trelby import mypickle
 from trelby import screenplay
 from trelby import util

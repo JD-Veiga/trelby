@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+
+
 from trelby import trelbyframe
 from trelby import translations
 

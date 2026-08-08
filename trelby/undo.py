@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+
+
 import zlib
 
 from trelby.line import Line

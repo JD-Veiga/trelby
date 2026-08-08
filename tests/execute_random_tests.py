@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 # ut:ignore
 
 # runs random operations on a Screenplay as a way of trying to find bugs.
 # note that this is not part of the normal test run, this has to be run
 # manually.
+
 
 import os
 import random

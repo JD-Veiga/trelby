@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+
+
 from trelby import pml
 from trelby import screenplay
 

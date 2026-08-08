@@ -1,4 +1,8 @@
+# -*- coding: utf-8 -*-
+
 # ut:ignore
+
+
 import os
 
 from trelby import config

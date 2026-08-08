@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+
+
 import xml.sax.saxutils as xss
 
 import wx

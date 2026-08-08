@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+
+
 from trelby import pml
 
 # character widths and general font information for each font. acquired

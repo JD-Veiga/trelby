@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+
+
 from trelby import characterreport
 from trelby import config
 from trelby import pdf

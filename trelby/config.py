@@ -1,5 +1,8 @@
+# -*- coding: utf-8 -*-
+
 # see fileformat.txt for more detailed information about the various
 # defines found here.
+
 
 import copy
 import os

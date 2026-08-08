@@ -1,4 +1,8 @@
+# -*- coding: utf-8 -*-
+
+
 """Translation related functions"""
+
 
 import os
 import gettext

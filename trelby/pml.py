@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 # PML is short for Page Modeling Language, our own neat little PDF-wannabe
 # format for expressing a script's complete contents in a neutral way
 # that's easy to render to almost anything, e.g. PDF, Postscript, Windows
@@ -11,6 +13,7 @@
 # is painted on top of.
 
 # All measurements in PML are in (floating point) millimeters.
+
 
 import textwrap
 from typing import AnyStr, Dict, List, Optional, Tuple

@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+
+
 import trelby
 from trelby import mypickle
 from trelby import util

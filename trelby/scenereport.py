@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+
+
 from trelby import misc
 from trelby import pdf
 from trelby import pml

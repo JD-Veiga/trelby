@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+
+
 import wx
 
 # temporary until we can find out a way to separate MyCtrl

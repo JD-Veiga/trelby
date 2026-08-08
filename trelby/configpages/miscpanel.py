@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+
+
 import os.path
 
 from trelby import misc

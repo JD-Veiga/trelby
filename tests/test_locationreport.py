@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+
+
 from tests import u
 from trelby import locationreport
 from trelby import scenereport
