@@ -8,15 +8,17 @@
 """Test parsing CLI arguments."""
 
 
-from unittest import mock
+import importlib
+import sys
 from collections.abc import Generator
+from types import ModuleType
+from unittest import mock
 
 import pytest
 
-from trelby import opts
-
 
 def _assert_opts(
+        opts: ModuleType,
         *,
         is_test: bool = False,
         conf: str | None = None,
@@ -25,16 +27,14 @@ def _assert_opts(
     """Assert that CLI arguments are properly parsed.
 
     Args:
-        is_test: expected value for isTest.
+        opts: `opts` module.
+        is_test: expected value for is_test_mode.
         conf: expected value for conf.
         filenames: expected value for filenames.
 
     """
 
-    if hasattr(opts, 'isTest'):
-        assert opts.isTest is bool(is_test)
-    else:
-        assert is_test is False
+    assert opts.is_test_mode is bool(is_test)
 
     if conf is None:
         assert getattr(opts, 'conf', None) is None
@@ -59,14 +59,45 @@ def reset_opts() -> Generator:
         Nothing.
 
     """
+    exists_trelby_opts = 'trelby.opts' in sys.modules
 
-    _assert_opts()
+    with (
+            mock.patch.dict(
+                sys.modules,
+                {
+                    name: module for name, module in sys.modules.items()
+                    if name != 'trelby.opts'
+                },
+                clear=True
+            )
+    ):
+        assert 'trelby.opts' not in sys.modules
+        yield
 
-    yield
+    assert bool('trelby.opts' in sys.modules) is exists_trelby_opts
 
-    opts.isTest = False
-    opts.conf = None
-    opts.filenames = []
+
+def _test_parsing_cli(
+        argv: list[str],
+        *,
+        is_test: bool = False,
+        conf: str | None = None,
+        filenames: list[str] | None = None
+) -> None:
+    """Test parsing arguments from CLI.
+
+    Args:
+        argv: fake arguments from CLI.
+        is_test: expected value for is_test_mode.
+        conf: expected value for conf.
+        filenames: expected value for filenames.
+
+    """
+    with mock.patch.object(sys, 'argv', argv):
+        opts = importlib.import_module('.opts', 'trelby')
+
+    assert 'trelby.opts' in sys.modules
+    _assert_opts(opts, is_test=is_test, conf=conf, filenames=filenames)
 
 
 def test_parsing_cli_no_args(
@@ -75,46 +106,40 @@ def test_parsing_cli_no_args(
     """Test parsing CLI without arguments."""
 
     with subtests.test('No CLI arguments.'):
-        argv: list[str] = []
-        with mock.patch('trelby.opts.sys.argv', argv):
-            opts.init()
-        _assert_opts()
+        _test_parsing_cli([])
 
     with subtests.test('Only program argument.'):
-        argv = ['spam.py']
-        with mock.patch('trelby.opts.sys.argv', argv):
-            opts.init()
-        _assert_opts()
+        _test_parsing_cli(['spam.py'])
 
 
-def test_parsing_cli_test(reset_opts: None) -> None:
+@pytest.mark.parametrize('param', ['--test', '-t'])
+def test_parsing_cli_test(reset_opts: None, param: str) -> None:
     """Test parsing CLI with just --test."""
-
-    argv = ['spam.py', '--test']
-    with mock.patch('trelby.opts.sys.argv', argv):
-        opts.init()
-
-    _assert_opts(is_test=True)
+    _test_parsing_cli(
+        ['spam.py', param],
+        is_test=True
+    )
 
 
-def test_parsing_cli_config(reset_opts: None) -> None:
+@pytest.mark.parametrize('param', ['--conf', '-c'])
+def test_parsing_cli_config(reset_opts: None, param: str) -> None:
     """Test parsing CLI with --config."""
+    _test_parsing_cli(
+        ['spam.py', param, 'ham', 'eggs'],
+        conf='ham',
+        filenames=['eggs']
+    )
 
-    argv = ['spam.py', '--conf', 'ham', 'eggs']
-    with mock.patch('trelby.opts.sys.argv', argv):
-        opts.init()
 
-    _assert_opts(conf='ham', filenames=['eggs'])
-
-
-def test_parsing_cli_config_without_value(reset_opts: None) -> None:
+@pytest.mark.parametrize('param', ['--conf', '-c'])
+def test_parsing_cli_config_without_value(
+        reset_opts: None, param: str
+) -> None:
     """Test parsing CLI with --config without value."""
-
-    argv = ['spam.py', 'eggs', '--conf']
-    with mock.patch('trelby.opts.sys.argv', argv):
-        opts.init()
-
-    _assert_opts(filenames=['eggs'])
+    _test_parsing_cli(
+        ['spam.py', 'eggs', param],
+        filenames=['eggs']
+    )
 
 
 @pytest.mark.parametrize(
@@ -122,9 +147,24 @@ def test_parsing_cli_config_without_value(reset_opts: None) -> None:
 )
 def test_parsing_cli_filenames(reset_opts: None, cli_args: list[str]) -> None:
     """Test parsing CLI with only filenames."""
+    _test_parsing_cli(
+        ['spam.py', *cli_args],
+        filenames=cli_args
+    )
 
-    argv = ['spam.py', *cli_args]
-    with mock.patch('trelby.opts.sys.argv', argv):
-        opts.init()
 
-    _assert_opts(filenames=cli_args)
+def test_getting_missing_attribute() -> None:
+    """Test getting a missing attribute from `opts` module."""
+
+    with mock.patch.object(sys, 'argv', []):
+        opts = importlib.import_module('.opts', 'trelby')
+        with (
+                pytest.raises(
+                    AttributeError,
+                    match=r"module\ 'trelby\.opts'\ has\ no\ attribute\ 'ham'"
+                ) as raised
+        ):
+            opts.ham  # noqa:B018  # pylint: disable=pointless-statement
+
+        assert raised.value.name == 'ham'
+        assert raised.value.obj == opts
