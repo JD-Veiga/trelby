@@ -697,7 +697,7 @@ class MyFrame(wx.Frame):
 
         for i, fi in enumerate(self.gd.cfgGui.fonts):
             if not util.isFixedWidth(fi.font):
-                failed.append(names[i])
+                failed.append(_(names[i]))
 
         if failed:
             wx.MessageBox(
