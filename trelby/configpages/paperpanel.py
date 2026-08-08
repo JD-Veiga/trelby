@@ -130,7 +130,7 @@ class PaperPanel(wx.Panel):
 
     def setLines(self):
         self.cfg.recalc(False)
-        self.linesLabel.SetLabel(_(_("Lines per page: {}").format(self.cfg.linesOnPage)))
+        self.linesLabel.SetLabel(_("Lines per page: {}").format(self.cfg.linesOnPage))
 
     def OnPaperCombo(self, event):
         w, h = self.paperCombo.GetClientData(self.paperCombo.GetSelection())
